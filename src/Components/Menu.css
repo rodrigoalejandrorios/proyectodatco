@@ -1,0 +1,122 @@
+.cont-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 5rem;
+  background: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+}
+
+.cont-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cont-left .hambicon {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.cont-left .datcoicon {
+  width: 7rem;
+  margin-left: 10px;
+}
+
+.cont-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cont-right .profileicon {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 82px;
+}
+
+.cont-right .downicon {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+
+.toggleuser {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.2 ease-in-out;
+  transition: all 0.2 ease-in-out;
+}
+
+.toggleuser li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.toggleuser li:hover {
+  background: rgba(0, 0, 0, 0.075);
+}
+
+.toggleuser .logout {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+.toggleuser .logout img {
+  width: 20px;
+  padding: 2px 0 0 0;
+  margin-right: 5px;
+}
+
+.toggleuser .logout:hover {
+  background: rgba(0, 0, 0, 0.075);
+}
+
+.toggleuser img {
+  width: 24px;
+  margin: auto;
+  top: 3px;
+  position: relative;
+}
+
+.toggleuser .box-user {
+  padding: 15px;
+  background: #f7f7f7;
+  width: 150px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=Menu.css.map */

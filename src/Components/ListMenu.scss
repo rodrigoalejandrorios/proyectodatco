@@ -1,0 +1,94 @@
+@import "../var.scss";
+
+.cont-listmenu {
+  padding: 1rem 2rem 0 2rem;
+  width: 25rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: $color-gradient;
+  z-index: 20;
+  top: 0;
+  overflow-y: auto;
+  left: 0;
+  transition: all 0.5 ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cont-listmenu-left {
+  padding: 1rem 2rem 0 2rem;
+  width: 25rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: $color-gradient;
+  z-index: 20;
+  top: 0;
+  overflow-y: auto;
+  left: -100%;
+}
+
+.cont-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .closeicon {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    width: 2.2rem;
+    height: 2.2rem;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      background: $bg-box-title;
+    }
+  }
+
+  .logoDatco {
+    opacity: 0.5;
+    width: 10rem;
+  }
+}
+
+.list {
+  margin: 20px 0 0 0;
+  li {
+    padding: 20px 0 20px 10px;
+    font-size: 2.2rem;
+    color: $color-white;
+    list-style: none;
+    transition: all 0.1s ease-in-out;
+    border-radius: 5px;
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      background: $bg-box-title;
+    }
+  }
+  button {
+    margin: 20px 0 0 0;
+    font-size: 1.5rem;
+    color: $color-white;
+    border: 2px solid $color-white;
+    background: $opacity-black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+}
+
+.blur {
+  position: fixed;
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $opacity-black;
+  transition: all 0.1s ease-in-out;
+}

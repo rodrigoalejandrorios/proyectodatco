@@ -1,0 +1,125 @@
+.cont-listmenu {
+  padding: 1rem 2rem 0 2rem;
+  width: 25rem;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  background: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+  z-index: 20;
+  top: 0;
+  overflow-y: auto;
+  left: 0;
+  -webkit-transition: all 0.5 ease-in-out;
+  transition: all 0.5 ease-in-out;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cont-listmenu-left {
+  padding: 1rem 2rem 0 2rem;
+  width: 25rem;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  background: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+  z-index: 20;
+  top: 0;
+  overflow-y: auto;
+  left: -100%;
+}
+
+.cont-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cont-icons .closeicon {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  width: 2.2rem;
+  height: 2.2rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.cont-icons .closeicon:hover {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background: rgba(255, 255, 255, 0.19);
+}
+
+.cont-icons .logoDatco {
+  opacity: 0.5;
+  width: 10rem;
+}
+
+.list {
+  margin: 20px 0 0 0;
+}
+
+.list li {
+  padding: 20px 0 20px 10px;
+  font-size: 2.2rem;
+  color: #fff;
+  list-style: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border-radius: 5px;
+}
+
+.list li:hover {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background: rgba(255, 255, 255, 0.19);
+}
+
+.list button {
+  margin: 20px 0 0 0;
+  font-size: 1.5rem;
+  color: #fff;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.19);
+  padding: 0.5rem 1.5rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.blur {
+  position: fixed;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.19);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/*# sourceMappingURL=ListMenu.css.map */
