@@ -1,0 +1,81 @@
+@import "../var.scss";
+
+.cont-bg-login {
+  background: $color-gradient;
+  height: 100vh;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  z-index: -1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-login {
+  width: 30rem;
+  box-shadow: 0 0 10px $opacity-black;
+  background: $color-white;
+  border-radius: 7px;
+}
+
+.title-form {
+  margin: 5px 0 0 0;
+  font-weight: bold;
+}
+
+.form {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 5px 0;
+    color: rgba(0, 0, 0, 0.788);
+  }
+  .inputText {
+    font-size: 18px;
+    margin: 13px 0;
+    color: rgba(0, 0, 0, 0.733);
+    height: 2.5rem;
+    border-radius: 4px;
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    outline: none;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.253);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px $color-primary, 0 0 0 5px rgba(29, 155, 209, 0.3);
+      border-color: transparent;
+      transition: all 0.3s;
+    }
+  }
+  button {
+    cursor: pointer;
+    margin: 13px 0 20px 0;
+    color: white;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 2.5rem;
+    background: $color-primary;
+    border: transparent;
+  }
+  .check {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    .checkbox {
+      margin-right: 5px;
+      width: 15px;
+      border-radius: 2px;
+
+      &:checked {
+        border: 1px solid blue;
+      }
+    }
+  }
+}

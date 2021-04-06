@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./Menu.css";
 
 //Images and SVG's archives
@@ -9,7 +10,7 @@ import datco from "../Assets/datco.svg";
 import logout from "../Assets/logout.svg";
 import clip from "../Assets/clip.svg";
 
-const Menu = ({ handleMenuAction }) => {
+const Menu = ({ handleMenuAction, handleAccess }) => {
   const [usermenu, setUsermenu] = useState(false);
 
   const handleStateMenu = () => {
@@ -23,6 +24,12 @@ const Menu = ({ handleMenuAction }) => {
       setUsermenu(false);
     }
   };
+  let history = useHistory();
+  const handleSignOut = () => {
+    handleAccess(false);
+    history.push("/auth");
+  };
+
   return (
     <>
       <div className="cont-menu">
@@ -40,7 +47,7 @@ const Menu = ({ handleMenuAction }) => {
                 <li>My Profile</li>
                 <li>Settings</li>
                 <hr />
-                <li className="logout">
+                <li onClick={handleSignOut} className="logout">
                   <img src={logout} />
                   Log Out
                 </li>

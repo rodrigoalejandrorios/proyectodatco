@@ -1,0 +1,115 @@
+.cont-bg-login {
+  background: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+  height: 100vh;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  z-index: -1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cont-login {
+  width: 30rem;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+  background: #fff;
+  border-radius: 7px;
+}
+
+.title-form {
+  margin: 5px 0 0 0;
+  font-weight: bold;
+}
+
+.form {
+  padding: 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form p {
+  margin: 5px 0;
+  color: rgba(0, 0, 0, 0.788);
+}
+
+.form .inputText {
+  font-size: 18px;
+  margin: 13px 0;
+  color: rgba(0, 0, 0, 0.733);
+  height: 2.5rem;
+  border-radius: 4px;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.377);
+  outline: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form .inputText::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.253);
+}
+
+.form .inputText:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.253);
+}
+
+.form .inputText::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.253);
+}
+
+.form .inputText::placeholder {
+  color: rgba(0, 0, 0, 0.253);
+}
+
+.form .inputText:focus {
+  -webkit-box-shadow: 0 0 0 1px #0d6efd, 0 0 0 5px rgba(29, 155, 209, 0.3);
+          box-shadow: 0 0 0 1px #0d6efd, 0 0 0 5px rgba(29, 155, 209, 0.3);
+  border-color: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form button {
+  cursor: pointer;
+  margin: 13px 0 20px 0;
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  height: 2.5rem;
+  background: #0d6efd;
+  border: transparent;
+}
+
+.form .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0;
+}
+
+.form .check .checkbox {
+  margin-right: 5px;
+  width: 15px;
+  border-radius: 2px;
+}
+
+.form .check .checkbox:checked {
+  border: 1px solid blue;
+}
+/*# sourceMappingURL=Login.css.map */

@@ -106,6 +106,10 @@
   background: rgba(0, 0, 0, 0.075);
 }
 
+.toggleuser hr {
+  opacity: 0.3;
+}
+
 .toggleuser img {
   width: 24px;
   margin: auto;

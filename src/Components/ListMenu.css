@@ -65,7 +65,7 @@
 .cont-icons .closeicon:hover {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background: rgba(255, 255, 255, 0.19);
+  background: rgba(255, 255, 255, 0.068);
 }
 
 .cont-icons .logoDatco {
@@ -90,7 +90,7 @@
 .list li:hover {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background: rgba(255, 255, 255, 0.19);
+  background: rgba(255, 255, 255, 0.068);
 }
 
 .list button {
@@ -98,7 +98,7 @@
   font-size: 1.5rem;
   color: #fff;
   border: 2px solid #fff;
-  background: rgba(0, 0, 0, 0.19);
+  background: rgba(0, 0, 0, 0.075);
   padding: 0.5rem 1.5rem;
   border-radius: 7px;
   cursor: pointer;
@@ -118,7 +118,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.19);
+  background: rgba(0, 0, 0, 0.075);
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }

@@ -44,7 +44,6 @@
 
 .toggleuser {
   position: absolute;
-
   top: 45px;
   right: 45px;
   display: flex;
@@ -62,6 +61,7 @@
       background: $opacity-black;
     }
   }
+
   .logout {
     cursor: pointer;
     font-size: 18px;
@@ -76,6 +76,9 @@
     &:hover {
       background: $opacity-black;
     }
+  }
+  hr {
+    opacity: 0.3;
   }
   img {
     width: 24px;

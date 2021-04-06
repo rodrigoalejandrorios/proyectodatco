@@ -1,19 +1,33 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Menu from "./Components/Menu";
-import ListMenu from "./Components/ListMenu";
+import PrivatePage from "./PrivatePage";
+import Login from "./Views/Login";
 
 function App() {
-  const [menu, setMenu] = useState(false);
+  const [boo, setBoo] = useState(false);
 
-  const handleMenuAction = (state) => {
-    setMenu(state);
+  const handleBoolean = (boolean) => {
+    setBoo(boolean);
   };
 
   return (
     <>
-      <Menu handleMenuAction={handleMenuAction} />
-      <ListMenu handleMenuAction={handleMenuAction} menu={menu} />
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path="/auth"
+            component={() => <Login handleBoolean={handleBoolean} />}
+          />
+          <Route
+            exact
+            path="/"
+            component={() => (
+              <PrivatePage authorized={boo} handleBoolean={handleBoolean} />
+            )}
+          />
+        </Switch>
+      </Router>
     </>
   );
 }
