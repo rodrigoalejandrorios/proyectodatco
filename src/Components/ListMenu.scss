@@ -2,12 +2,12 @@
 
 .cont-listmenu {
   padding: 1rem 2rem 0 2rem;
-  width: 25rem;
+  width: 21rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
   position: fixed;
-  background: $color-gradient;
+  background: $color-gradient-bottom;
   z-index: 20;
   top: 0;
   overflow-y: auto;
@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  background: $color-gradient;
+  background: $color-gradient-bottom;
   z-index: 20;
   top: 0;
   overflow-y: auto;
@@ -36,6 +36,7 @@
   align-items: center;
 
   .closeicon {
+    user-select: none;
     border-radius: 5px;
     cursor: pointer;
     padding: 5px;
@@ -49,26 +50,49 @@
   }
 
   .logoDatco {
-    opacity: 0.5;
-    width: 10rem;
+    user-select: none;
+    opacity: 0.2;
+    width: 9rem;
   }
 }
 
 .list {
+  hr {
+    background: white;
+    opacity: 0.1;
+    margin: 5px 0;
+  }
   margin: 20px 0 0 0;
+  a {
+    color: white;
+    text-decoration: none;
+  }
   li {
+    user-select: none;
+    cursor: pointer;
     padding: 20px 0 20px 10px;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     color: $color-white;
     list-style: none;
     transition: all 0.1s ease-in-out;
     border-radius: 5px;
+    text-decoration: none;
+
     &:hover {
       transition: all 0.1s ease-in-out;
       background: $bg-box-title;
     }
   }
+  p {
+    margin: 20px 0 10px 0;
+    color: rgba(255, 255, 255, 0.452);
+    font-size: 2rem;
+    user-select: none;
+  }
   button {
+    user-select: none;
+    width: 100%;
+    font-weight: bold;
     margin: 20px 0 0 0;
     font-size: 1.5rem;
     color: $color-white;
@@ -77,6 +101,14 @@
     padding: 0.5rem 1.5rem;
     border-radius: 7px;
     cursor: pointer;
+    outline: none;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      background: rgba(0, 0, 0, 0.26);
+    }
+    &:focus-within {
+      background: rgba(0, 0, 0, 0.116);
+    }
   }
 }
 
@@ -89,6 +121,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: $opacity-black;
+  background: $opacity-blue;
   transition: all 0.1s ease-in-out;
 }

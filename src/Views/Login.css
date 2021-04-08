@@ -1,10 +1,20 @@
-.cont-bg-login {
-  background: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+.cont-all {
+  background: -webkit-gradient(linear, left top, left bottom, from(#30458b), to(#74cbf3));
+  background: linear-gradient(180deg, #30458b 0%, #74cbf3 100%);
   height: 100vh;
   top: 0;
   width: 100%;
+  position: relative;
+}
+
+.cont-bg-login {
+  height: 100vh;
+  top: 0;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.13);
+  right: 0;
   position: absolute;
-  z-index: -1000;
+  z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,21 +26,48 @@
           align-items: center;
 }
 
+.bg-gradient {
+  height: 100vh;
+  top: 0;
+  width: 50%;
+  left: 0;
+  position: absolute;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iso {
+  width: 500px;
+}
+
 .cont-login {
   width: 30rem;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   background: #fff;
   border-radius: 7px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .title-form {
-  margin: 5px 0 0 0;
+  margin: 10px 0 20px 0;
   font-weight: bold;
+  font-size: 36px;
 }
 
 .form {
-  padding: 15px 20px;
+  padding: 20px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,36 +78,41 @@
 }
 
 .form p {
-  margin: 5px 0;
-  color: rgba(0, 0, 0, 0.788);
+  margin: 2px 0;
+  color: rgba(0, 0, 0, 0.493);
+  font-size: 15px;
 }
 
 .form .inputText {
-  font-size: 18px;
-  margin: 13px 0;
+  font-size: 22px;
+  margin: 5px 0 17px 0;
   color: rgba(0, 0, 0, 0.733);
-  height: 2.5rem;
+  height: 3.2rem;
   border-radius: 4px;
   padding: 0 10px;
-  border: 1px solid rgba(0, 0, 0, 0.377);
+  border: 1px solid rgba(0, 0, 0, 0.274);
   outline: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .form .inputText::-webkit-input-placeholder {
+  font-size: 15px;
   color: rgba(0, 0, 0, 0.253);
 }
 
 .form .inputText:-ms-input-placeholder {
+  font-size: 15px;
   color: rgba(0, 0, 0, 0.253);
 }
 
 .form .inputText::-ms-input-placeholder {
+  font-size: 15px;
   color: rgba(0, 0, 0, 0.253);
 }
 
 .form .inputText::placeholder {
+  font-size: 15px;
   color: rgba(0, 0, 0, 0.253);
 }
 
@@ -83,14 +125,21 @@
 }
 
 .form button {
+  font-weight: bold;
   cursor: pointer;
-  margin: 13px 0 20px 0;
+  margin: 20px 0 20px 0;
   color: white;
   border-radius: 4px;
   font-size: 18px;
-  height: 2.5rem;
+  height: 3.2rem;
   background: #0d6efd;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   border: transparent;
+}
+
+.form button:hover {
+  background: #0860e4;
 }
 
 .form .check {

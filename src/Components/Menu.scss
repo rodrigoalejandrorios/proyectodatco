@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   padding: 15px 5rem;
-  background: $color-gradient;
+  background: $color-gradient-right;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
 }
 
@@ -65,13 +65,16 @@
   .logout {
     cursor: pointer;
     font-size: 18px;
-    padding: 5px 5px;
+    //padding: 5px 5px;
     border-radius: 5px;
 
     img {
       width: 20px;
-      padding: 2px 0 0 0;
+      //padding: 2px 0 5px 0;
       margin-right: 5px;
+    }
+    p {
+      padding: 2px 0 0 0;
     }
     &:hover {
       background: $opacity-black;

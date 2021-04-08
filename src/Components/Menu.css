@@ -6,7 +6,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 15px 5rem;
-  background: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+  background: -webkit-gradient(linear, left top, right top, from(#2f4793), to(#74cbf3));
+  background: linear-gradient(90deg, #2f4793 0%, #74cbf3 100%);
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
 }
@@ -86,24 +87,26 @@
 }
 
 .toggleuser li:hover {
-  background: rgba(0, 0, 0, 0.075);
+  background: rgba(0, 0, 0, 0.137);
 }
 
 .toggleuser .logout {
   cursor: pointer;
   font-size: 18px;
-  padding: 5px 5px;
   border-radius: 5px;
 }
 
 .toggleuser .logout img {
   width: 20px;
-  padding: 2px 0 0 0;
   margin-right: 5px;
 }
 
+.toggleuser .logout p {
+  padding: 2px 0 0 0;
+}
+
 .toggleuser .logout:hover {
-  background: rgba(0, 0, 0, 0.075);
+  background: rgba(0, 0, 0, 0.137);
 }
 
 .toggleuser hr {

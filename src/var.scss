@@ -1,11 +1,28 @@
-$color-gradient: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+$color-gradient-right: linear-gradient(
+  90deg,
+  rgba(47, 71, 147, 1) 0%,
+  rgba(116, 203, 243, 1) 100%
+);
+$color-gradient-bottom: linear-gradient(
+  180deg,
+  rgb(48, 69, 139) 0%,
+  rgba(116, 203, 243, 1) 100%
+);
+
 $color-white: #fff;
 $color-semiwhite: #f7f7f7;
 $bg-box-title: rgba(255, 255, 255, 0.068);
-$opacity-black: rgba(0, 0, 0, 0.075);
+$opacity-black: rgba(0, 0, 0, 0.137);
+$opacity-blue: rgba(13, 19, 43, 0.445);
 $bg-box: rgba(255, 255, 255, 0.45);
 $color-primary: #0d6efd;
+$color-primary-hv: #0860e4;
 $color-success: #0faa3e;
 $color-danger: #dc3545;
 $color-warning: #ffc107;
-$color-dark: #212529;
+$color-dark: #292d32;
+$color-dark-el: #2a2d32;
+$color-light: #ecf0f3;
+$color-light-el: #e3e6ec;
+
+//Box Shadows

@@ -1,0 +1,133 @@
+.cont-modal {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+}
+
+.closeIconModal {
+  position: absolute;
+  margin: auto;
+  top: 80px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.377);
+  cursor: pointer;
+  padding: 5px;
+  width: 3.5rem;
+  height: 3.5rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.closeIconModal:hover {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background: rgba(0, 0, 0, 0.603);
+}
+
+.box-modal {
+  width: 30rem;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.137);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.137);
+  background: #fff;
+  border-radius: 7px;
+}
+
+.box-modal form {
+  padding: 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box-modal input {
+  font-size: 18px;
+  margin: 5px 0 17px 0;
+  color: rgba(0, 0, 0, 0.733);
+  height: 2.5rem;
+  border-radius: 4px;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.377);
+  outline: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.box-modal input::-webkit-input-placeholder {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.253);
+}
+
+.box-modal input:-ms-input-placeholder {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.253);
+}
+
+.box-modal input::-ms-input-placeholder {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.253);
+}
+
+.box-modal input::placeholder {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.253);
+}
+
+.box-modal input:focus {
+  -webkit-box-shadow: 0 0 0 1px #0d6efd, 0 0 0 5px rgba(29, 155, 209, 0.3);
+          box-shadow: 0 0 0 1px #0d6efd, 0 0 0 5px rgba(29, 155, 209, 0.3);
+  border-color: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.box-modal button {
+  font-weight: bold;
+  cursor: pointer;
+  margin: 13px 0 15px 0;
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  height: 2.5rem;
+  background: #0d6efd;
+  border: transparent;
+}
+
+.blur-modal {
+  position: fixed;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 19, 43, 0.445);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  z-index: -1000;
+}
+/*# sourceMappingURL=AddClient.css.map */

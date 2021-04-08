@@ -1,50 +1,78 @@
 @import "../var.scss";
 
-.cont-bg-login {
-  background: $color-gradient;
+.cont-all {
+  background: $color-gradient-bottom;
   height: 100vh;
   top: 0;
   width: 100%;
+  position: relative;
+}
+.cont-bg-login {
+  height: 100vh;
+  top: 0;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.13);
+  right: 0;
   position: absolute;
-  z-index: -1000;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.bg-gradient {
+  height: 100vh;
+  top: 0;
+  width: 50%;
+  left: 0;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iso {
+  width: 500px;
+}
+
 .cont-login {
   width: 30rem;
-  box-shadow: 0 0 10px $opacity-black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   background: $color-white;
   border-radius: 7px;
+  user-select: none;
 }
 
 .title-form {
-  margin: 5px 0 0 0;
+  margin: 10px 0 20px 0;
   font-weight: bold;
+  font-size: 36px;
 }
 
 .form {
-  padding: 15px 20px;
+  padding: 20px 20px;
   display: flex;
   flex-direction: column;
 
   p {
-    margin: 5px 0;
-    color: rgba(0, 0, 0, 0.788);
+    margin: 2px 0;
+    color: rgba(0, 0, 0, 0.493);
+    font-size: 15px;
   }
   .inputText {
-    font-size: 18px;
-    margin: 13px 0;
+    font-size: 22px;
+    margin: 5px 0 17px 0;
     color: rgba(0, 0, 0, 0.733);
-    height: 2.5rem;
+    height: 3.2rem;
     border-radius: 4px;
     padding: 0 10px;
-    border: 1px solid rgba(0, 0, 0, 0.377);
+    border: 1px solid rgba(0, 0, 0, 0.274);
     outline: none;
     transition: all 0.3s;
 
     &::placeholder {
+      font-size: 15px;
       color: rgba(0, 0, 0, 0.253);
     }
 
@@ -55,14 +83,20 @@
     }
   }
   button {
+    font-weight: bold;
     cursor: pointer;
-    margin: 13px 0 20px 0;
+    margin: 20px 0 20px 0;
     color: white;
     border-radius: 4px;
     font-size: 18px;
-    height: 2.5rem;
+    height: 3.2rem;
     background: $color-primary;
+    transition: all 0.3s;
     border: transparent;
+
+    &:hover {
+      background: $color-primary-hv;
+    }
   }
   .check {
     display: flex;
@@ -72,7 +106,6 @@
       margin-right: 5px;
       width: 15px;
       border-radius: 2px;
-
       &:checked {
         border: 1px solid blue;
       }

@@ -1,4 +1,5 @@
-import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./ListMenu.css";
 import datco from "../Assets/datco.svg";
 import closeicon from "../Assets/closeicon.svg";
@@ -13,10 +14,17 @@ const clickfalse = {
   left: "-100%",
 };
 
-const ListMenu = ({ handleMenuAction, menu }) => {
+const ListMenu = ({ handleMenuAction, menu, handleModalClient, client }) => {
+  //Agregar clientes
+
+  const handleModalActive = () => {
+    handleModalClient(true);
+    handleMenuAction(false);
+  };
   const handleCloseMenuAction = () => {
     handleMenuAction(false);
   };
+
   return (
     <>
       {menu ? (
@@ -31,11 +39,23 @@ const ListMenu = ({ handleMenuAction, menu }) => {
               <img className="logoDatco" src={datco} />
             </div>
             <ul className="list">
-              <li>Admin</li>
-              <li>Client 1</li>
-              <li>Client 2</li>
-              <li>Client 3</li>
-              <button> + Add Client</button>
+              <hr />
+              {client.length > 0 ? (
+                client.map((clientone) => {
+                  return (
+                    <div key={clientone.id}>
+                      <Link key={clientone.id} to={clientone.id}>
+                        <li key={clientone.id}>{clientone.client}</li>
+                      </Link>
+                      <hr />
+                    </div>
+                  );
+                })
+              ) : (
+                <p>Agregar clientes...</p>
+              )}
+
+              <button onClick={handleModalActive}> + Add Client</button>
             </ul>
           </div>
           <div className="blur"></div>
@@ -48,10 +68,21 @@ const ListMenu = ({ handleMenuAction, menu }) => {
               <img className="logoDatco" src={datco} />
             </div>
             <ul className="list">
-              <li>Admin</li>
-              <li>Client 1</li>
-              <li>Client 2</li>
-              <li>Client 3</li>
+              <hr />
+              {client.length > 0 ? (
+                client.map((clientone) => {
+                  return (
+                    <div key={clientone.id}>
+                      <Link key={clientone.id} to={clientone.endpoint}>
+                        <li key={clientone.id}>{clientone.client}</li>
+                      </Link>
+                      <hr />
+                    </div>
+                  );
+                })
+              ) : (
+                <p>Agregar clientes...</p>
+              )}
               <button> + Add Client</button>
             </ul>
           </div>

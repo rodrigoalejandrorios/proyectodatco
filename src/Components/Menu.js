@@ -17,17 +17,16 @@ const Menu = ({ handleMenuAction, handleAccess }) => {
     handleMenuAction(true);
   };
 
+  const handleAccessToggle = (event) => {
+    handleAccess(event);
+  };
+
   const handleUserMenu = () => {
     if (!usermenu) {
       setUsermenu(true);
     } else {
       setUsermenu(false);
     }
-  };
-  let history = useHistory();
-  const handleSignOut = () => {
-    handleAccess(false);
-    history.push("/auth");
   };
 
   return (
@@ -41,24 +40,35 @@ const Menu = ({ handleMenuAction, handleAccess }) => {
           <img className="downicon" src={downicon} />
           <img className="profileicon" src={profileicon} />
           {usermenu ? (
-            <div className="toggleuser">
-              <img src={clip} />
-              <ul className="box-user">
-                <li>My Profile</li>
-                <li>Settings</li>
-                <hr />
-                <li onClick={handleSignOut} className="logout">
-                  <img src={logout} />
-                  Log Out
-                </li>
-              </ul>
-            </div>
+            <ToggleMenu handleAccessToggle={handleAccessToggle} />
           ) : (
             <div></div>
           )}
         </div>
       </div>
     </>
+  );
+};
+
+const ToggleMenu = ({ handleAccessToggle }) => {
+  let history = useHistory();
+  const handleSignOut = () => {
+    handleAccessToggle(false);
+    history.push("/auth");
+  };
+  return (
+    <div className="toggleuser">
+      <img src={clip} />
+      <ul className="box-user">
+        <li>My Profile</li>
+        <li>Settings</li>
+        <hr />
+        <li onClick={handleSignOut} className="logout">
+          <img src={logout} />
+          Log Out
+        </li>
+      </ul>
+    </div>
   );
 };
 

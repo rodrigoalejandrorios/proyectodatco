@@ -1,6 +1,6 @@
 .cont-listmenu {
   padding: 1rem 2rem 0 2rem;
-  width: 25rem;
+  width: 21rem;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,7 +10,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  background: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#30458b), to(#74cbf3));
+  background: linear-gradient(180deg, #30458b 0%, #74cbf3 100%);
   z-index: 20;
   top: 0;
   overflow-y: auto;
@@ -33,7 +34,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  background: linear-gradient(89.59deg, #3474c4 -0.56%, #123e79 137.83%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#30458b), to(#74cbf3));
+  background: linear-gradient(180deg, #30458b 0%, #74cbf3 100%);
   z-index: 20;
   top: 0;
   overflow-y: auto;
@@ -53,6 +55,10 @@
 }
 
 .cont-icons .closeicon {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-radius: 5px;
   cursor: pointer;
   padding: 5px;
@@ -69,22 +75,43 @@
 }
 
 .cont-icons .logoDatco {
-  opacity: 0.5;
-  width: 10rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0.2;
+  width: 9rem;
 }
 
 .list {
   margin: 20px 0 0 0;
 }
 
+.list hr {
+  background: white;
+  opacity: 0.1;
+  margin: 5px 0;
+}
+
+.list a {
+  color: white;
+  text-decoration: none;
+}
+
 .list li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
   padding: 20px 0 20px 10px;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: #fff;
   list-style: none;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .list li:hover {
@@ -93,15 +120,42 @@
   background: rgba(255, 255, 255, 0.068);
 }
 
+.list p {
+  margin: 20px 0 10px 0;
+  color: rgba(255, 255, 255, 0.452);
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .list button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  font-weight: bold;
   margin: 20px 0 0 0;
   font-size: 1.5rem;
   color: #fff;
   border: 2px solid #fff;
-  background: rgba(0, 0, 0, 0.075);
+  background: rgba(0, 0, 0, 0.137);
   padding: 0.5rem 1.5rem;
   border-radius: 7px;
   cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.list button:hover {
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.list button:focus-within {
+  background: rgba(0, 0, 0, 0.116);
 }
 
 .blur {
@@ -118,7 +172,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.075);
+  background: rgba(13, 19, 43, 0.445);
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
