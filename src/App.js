@@ -31,23 +31,10 @@ function App() {
               />
             )}
           />
-          <Route
-            exact
-            path={`/${endpoint.endpoint}`}
-            component={() => <VariableComp />}
-          />
         </Switch>
       </Router>
     </>
   );
 }
-
-const VariableComp = ({ value }) => {
-  return (
-    <div>
-      <h1>Hola {value}</h1>
-    </div>
-  );
-};
 
 export default App;
