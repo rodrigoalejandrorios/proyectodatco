@@ -3,8 +3,11 @@ import { useHistory } from "react-router-dom";
 import useCustomForm from "../Utils/useForm";
 import datcoiso from "../Assets/datcoiso.svg";
 import datco from "../Assets/datco.svg";
+import { v4 as uuidv4 } from "uuid";
 
 import "./Login.css";
+
+let session = uuidv4();
 
 const Login = ({ handleBoolean }) => {
   const [values, handler, setValues] = useCustomForm();
@@ -16,6 +19,7 @@ const Login = ({ handleBoolean }) => {
     setValues({});
     if (values) {
       history.push("/");
+      localStorage.setItem("Session", session);
       handleBoolean(true);
     }
   };

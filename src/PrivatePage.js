@@ -8,9 +8,10 @@ import {
 import Menu from "./Components/Menu";
 import ListMenu from "./Components/ListMenu";
 import ModalAddClient from "./Components/AddClient";
-import { set } from "react-hook-form";
+import { v4 as uuidv4 } from "uuid";
+let session = uuidv4();
 
-function PrivatePage({ authorized, handleBoolean, endpoint }) {
+const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
   const [menu, setMenu] = useState(false);
   const [access, setAccess] = useState(true);
   const [modal, setModal] = useState(false);
@@ -23,6 +24,10 @@ function PrivatePage({ authorized, handleBoolean, endpoint }) {
   const handleMenuAction = (state) => {
     setMenu(state);
   };
+
+  if (localStorage.getItem("Session")) {
+    authorized = true;
+  }
 
   if (!authorized) {
     return <Redirect to="/auth" />;
@@ -61,7 +66,7 @@ function PrivatePage({ authorized, handleBoolean, endpoint }) {
             )}
           </Route>
           {endpoint.length > 0 ? (
-            endpoint.map((info) => <Client key={info.id} {...info} />)
+            endpoint.map((info) => <Client {...info} />)
           ) : (
             <div></div>
           )}
@@ -69,12 +74,12 @@ function PrivatePage({ authorized, handleBoolean, endpoint }) {
       </Router>
     </>
   );
-}
+};
 
-const Client = ({ client, endpoint }) => {
+const Client = ({ id, client, endpoint }) => {
   return (
     <>
-      <Route path={`/${endpoint}`}>
+      <Route key={id} path={`/${endpoint}`}>
         <div>Hola {client}</div>
       </Route>
     </>

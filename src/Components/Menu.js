@@ -55,6 +55,7 @@ const ToggleMenu = ({ handleAccessToggle }) => {
   const handleSignOut = () => {
     handleAccessToggle(false);
     history.push("/auth");
+    localStorage.removeItem("Session");
   };
   return (
     <div className="toggleuser">
