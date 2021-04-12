@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,8 +8,6 @@ import {
 import Menu from "./Components/Menu";
 import ListMenu from "./Components/ListMenu";
 import ModalAddClient from "./Components/AddClient";
-import { v4 as uuidv4 } from "uuid";
-let session = uuidv4();
 
 const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
   const [menu, setMenu] = useState(false);
@@ -42,7 +40,7 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
     <>
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route path="/">
             <Menu
               handleMenuAction={handleMenuAction}
               handleAccess={handleAccess}
@@ -64,24 +62,28 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
                 setClient={setClient}
               />
             )}
+            {endpoint.length > 0 ? (
+              endpoint.map((info) => {
+                return (
+                  <Route key={info.id} path={`/${info.endpoint}`}>
+                    <Client {...info} />
+                  </Route>
+                );
+              })
+            ) : (
+              <div></div>
+            )}
           </Route>
-          {endpoint.length > 0 ? (
-            endpoint.map((info) => <Client {...info} />)
-          ) : (
-            <div></div>
-          )}
         </Switch>
       </Router>
     </>
   );
 };
 
-const Client = ({ id, client, endpoint }) => {
+const Client = ({ client }) => {
   return (
     <>
-      <Route key={id} path={`/${endpoint}`}>
-        <div>Hola {client}</div>
-      </Route>
+      <div>Hola {client}</div>
     </>
   );
 };

@@ -48,7 +48,7 @@
 }
 
 .box-modal form {
-  padding: 15px 20px;
+  padding: 25px 20px 15px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,8 +92,8 @@
 }
 
 .box-modal input:focus {
-  -webkit-box-shadow: 0 0 0 1px #0d6efd, 0 0 0 5px rgba(29, 155, 209, 0.3);
-          box-shadow: 0 0 0 1px #0d6efd, 0 0 0 5px rgba(29, 155, 209, 0.3);
+  -webkit-box-shadow: 0 0 0 1px #0142da, 0 0 0 5px rgba(29, 155, 209, 0.3);
+          box-shadow: 0 0 0 1px #0142da, 0 0 0 5px rgba(29, 155, 209, 0.3);
   border-color: transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -102,12 +102,12 @@
 .box-modal button {
   font-weight: bold;
   cursor: pointer;
-  margin: 13px 0 15px 0;
+  margin: 13px 0 10px 0;
   color: white;
   border-radius: 4px;
   font-size: 18px;
   height: 2.5rem;
-  background: #0d6efd;
+  background: #0142da;
   border: transparent;
 }
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivatePage from "./PrivatePage";
 import Login from "./Views/Login";
+import Routes from "./Routes/index";
 
 function App() {
   const [boo, setBoo] = useState(false);

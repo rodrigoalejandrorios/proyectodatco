@@ -11,6 +11,7 @@ let session = uuidv4();
 
 const Login = ({ handleBoolean }) => {
   const [values, handler, setValues] = useCustomForm();
+  const [check, setCheck] = useState(false);
 
   let history = useHistory();
 
@@ -19,10 +20,17 @@ const Login = ({ handleBoolean }) => {
     setValues({});
     if (values) {
       history.push("/");
-      localStorage.setItem("Session", session);
+
       handleBoolean(true);
     }
   };
+
+  const handleCheckbox = () => {
+    setCheck(true);
+  };
+  if (check === true) {
+    localStorage.setItem("Session", session);
+  }
 
   return (
     <>
@@ -53,7 +61,13 @@ const Login = ({ handleBoolean }) => {
               />
 
               <label className="check">
-                <input className="checkbox" type="checkbox" /> Recordar Sesión
+                <input
+                  className="checkbox"
+                  type="checkbox"
+                  defaultChecked={check}
+                  onChange={handleCheckbox}
+                />{" "}
+                Recordar Sesión
               </label>
               <button className="signin">Iniciar Sesión</button>
             </form>

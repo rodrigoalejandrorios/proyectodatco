@@ -117,8 +117,8 @@
 }
 
 .form .inputText:focus {
-  -webkit-box-shadow: 0 0 0 1px #0d6efd, 0 0 0 5px rgba(29, 155, 209, 0.3);
-          box-shadow: 0 0 0 1px #0d6efd, 0 0 0 5px rgba(29, 155, 209, 0.3);
+  -webkit-box-shadow: 0 0 0 1px #0142da, 0 0 0 5px rgba(29, 155, 209, 0.3);
+          box-shadow: 0 0 0 1px #0142da, 0 0 0 5px rgba(29, 155, 209, 0.3);
   border-color: transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -132,7 +132,7 @@
   border-radius: 4px;
   font-size: 18px;
   height: 3.2rem;
-  background: #0d6efd;
+  background: #0142da;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: transparent;

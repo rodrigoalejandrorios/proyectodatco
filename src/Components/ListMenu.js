@@ -43,7 +43,7 @@ const ListMenu = ({ handleMenuAction, menu, handleModalClient, client }) => {
               {client.length > 0 ? (
                 client.map((clientone) => {
                   return (
-                    <div key={clientone.id}>
+                    <div onClick={handleCloseMenuAction} key={clientone.id}>
                       <Link key={clientone.id} to={clientone.endpoint}>
                         <li key={clientone.id}>{clientone.client}</li>
                       </Link>
