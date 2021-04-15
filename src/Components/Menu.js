@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Menu.css";
 
 //Images and SVG's archives
@@ -61,8 +61,12 @@ const ToggleMenu = ({ handleAccessToggle }) => {
     <div className="toggleuser">
       <img src={clip} />
       <ul className="box-user">
-        <li>My Profile</li>
-        <li>Settings</li>
+        <Link to="/profile">
+          <li>My Profile</li>
+        </Link>
+        <Link to="/settings">
+          <li>Settings</li>
+        </Link>
         <hr />
         <li onClick={handleSignOut} className="logout">
           <img src={logout} />

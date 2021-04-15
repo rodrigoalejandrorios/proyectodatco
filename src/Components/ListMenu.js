@@ -73,8 +73,8 @@ const ListMenu = ({ handleMenuAction, menu, handleModalClient, client }) => {
                 client.map((clientone) => {
                   return (
                     <div key={clientone.id}>
-                      <Link key={clientone.id} to={clientone.endpoint}>
-                        <li key={clientone.id}>{clientone.client}</li>
+                      <Link to={clientone.endpoint}>
+                        <li>{clientone.client}</li>
                       </Link>
                       <hr />
                     </div>

@@ -24,3 +24,4 @@ yarn-error.log*
 
 # Carpetas de pruebas a implementar
 /Routes
+/Auth

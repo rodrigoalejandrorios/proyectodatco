@@ -44,17 +44,21 @@
 
 .toggleuser {
   position: absolute;
-  top: 45px;
+  top: 50px;
   right: 45px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   transition: all 0.2 ease-in-out;
+  a {
+    text-decoration: none;
+    color: black;
+  }
   li {
     list-style: none;
     cursor: pointer;
     font-size: 18px;
-    padding: 5px 5px;
+    padding: 5px 7px;
     margin: 10px 0;
     border-radius: 5px;
     &:hover {

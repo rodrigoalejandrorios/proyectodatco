@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import useCustomForm from "../Utils/useForm";
-import datcoiso from "../Assets/datcoiso.svg";
 import datco from "../Assets/datco.svg";
 import { v4 as uuidv4 } from "uuid";
 
@@ -13,14 +12,18 @@ const Login = ({ handleBoolean }) => {
   const [values, handler, setValues] = useCustomForm();
   const [check, setCheck] = useState(false);
 
+  useEffect(() => {
+    document.title = "Login | Grupo DATCO";
+  }, []);
+
   let history = useHistory();
 
   const handleForm = (e) => {
     e.preventDefault();
     setValues({});
+    console.log(values);
     if (values) {
       history.push("/");
-
       handleBoolean(true);
     }
   };
@@ -28,6 +31,7 @@ const Login = ({ handleBoolean }) => {
   const handleCheckbox = () => {
     setCheck(true);
   };
+
   if (check === true) {
     localStorage.setItem("Session", session);
   }
