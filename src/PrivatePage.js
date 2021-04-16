@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import Menu from "./Components/Menu";
 import ListMenu from "./Components/ListMenu";
 import PanelAdmin from "./Pages/Admin";
@@ -42,40 +37,51 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
 
   return (
     <>
-      <Route path="/">
-        <Menu handleMenuAction={handleMenuAction} handleAccess={handleAccess} />
-        <ListMenu
-          handleMenuAction={handleMenuAction}
-          menu={menu}
+      <Menu handleMenuAction={handleMenuAction} handleAccess={handleAccess} />
+      <ListMenu
+        handleMenuAction={handleMenuAction}
+        menu={menu}
+        handleModalClient={handleModalClient}
+        client={client}
+      />
+      {!modal ? (
+        <div></div>
+      ) : (
+        <ModalAddClient
+          modal={modal}
           handleModalClient={handleModalClient}
           client={client}
+          endpoint={endpoint}
+          setClient={setClient}
         />
-        {!modal ? (
-          <div></div>
-        ) : (
-          <ModalAddClient
-            modal={modal}
-            handleModalClient={handleModalClient}
-            client={client}
-            endpoint={endpoint}
-            setClient={setClient}
-          />
-        )}
+      )}
+      <Route exact path="/">
         <PanelAdmin />
+      </Route>
 
-        {endpoint.length > 0 ? (
-          endpoint.map((info) => {
-            return (
-              <Route key={info.id} path={`/${info.endpoint}`}>
-                <Client {...info} />
-              </Route>
-            );
-          })
-        ) : (
-          <div></div>
-        )}
+      {endpoint.length > 0 ? (
+        endpoint.map((info) => {
+          return (
+            <Route exact key={info.id} path={`/${info.endpoint}`}>
+              <Client {...info} />
+            </Route>
+          );
+        })
+      ) : (
+        <div></div>
+      )}
+      <Route exact path="/dangerpanel">
+        <DangerPanel />
       </Route>
     </>
+  );
+};
+
+const DangerPanel = () => {
+  return (
+    <div>
+      <h1>Hola danger</h1>
+    </div>
   );
 };
 

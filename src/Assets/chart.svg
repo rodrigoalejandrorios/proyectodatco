@@ -1,0 +1,31 @@
+<svg viewBox="0 0 346 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:overlay" opacity="0.3">
+<path d="M21.489 4.375V108.542" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.3">
+<path d="M97.1792 4.375V108.542" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.3">
+<path d="M172.864 4.375V108.542" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.3">
+<path d="M248.554 4.375V108.542" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.3">
+<path d="M324.239 4.375V108.542" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M323.967 19.5833L248.892 80.8333L172.728 39.375L97.1085 34.7917L21.625 69.5833V114.792H324.511L323.967 19.5833Z" fill="url(#paint0_linear)" fill-opacity="0.5"/>
+<path d="M21.625 69.5833L97.1085 34.7917L172.728 39.375L248.892 80.8333L323.967 19.5833" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="22" cy="68" r="5" fill="white"/>
+<circle cx="97" cy="35" r="5" fill="white"/>
+<circle cx="173" cy="39" r="5" fill="white"/>
+<circle cx="249" cy="80" r="5" fill="white"/>
+<circle cx="324" cy="20" r="5" fill="white"/>
+<path d="M16.5 109H326" stroke="white"/>
+<defs>
+<linearGradient id="paint0_linear" x1="173.068" y1="36.6135" x2="173.068" y2="111.144" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

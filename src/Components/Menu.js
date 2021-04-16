@@ -31,7 +31,7 @@ const Menu = ({ handleMenuAction, handleAccess }) => {
 
   return (
     <>
-      <div className="cont-menu">
+      <div className="cont-menu-scroll">
         <div className="cont-left">
           <img onClick={handleStateMenu} className="hambicon" src={hambicon} />
           <img className="datcoicon" src={datco} />

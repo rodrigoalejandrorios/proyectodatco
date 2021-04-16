@@ -1,15 +1,20 @@
-.cont-menu {
+.cont-menu-scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px 5rem;
+  padding: 15px 0;
   background: -webkit-gradient(linear, left top, right top, from(#2f4793), to(#74cbf3));
   background: linear-gradient(90deg, #2f4793 0%, #74cbf3 100%);
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  -webkit-animation: apar 0.5s ease;
+          animation: apar 0.5s ease;
+  z-index: 2000;
 }
 
 .cont-left {
@@ -19,6 +24,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 5rem;
 }
 
 .cont-left .hambicon {
@@ -39,7 +45,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 4rem;
+  margin-right: 5rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -49,14 +55,13 @@
   cursor: pointer;
   width: 2.5rem;
   height: 2.5rem;
-  position: absolute;
-  right: 82px;
 }
 
 .cont-right .downicon {
   cursor: pointer;
   width: 1rem;
   height: 1rem;
+  margin-right: 0.4rem;
 }
 
 .toggleuser {

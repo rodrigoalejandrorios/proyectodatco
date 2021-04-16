@@ -12,7 +12,7 @@
   position: fixed;
   background: -webkit-gradient(linear, left top, left bottom, from(#30458b), to(#74cbf3));
   background: linear-gradient(180deg, #30458b 0%, #74cbf3 100%);
-  z-index: 20;
+  z-index: 2500;
   top: 0;
   overflow-y: auto;
   left: 0;
@@ -175,5 +175,6 @@
   background: rgba(13, 19, 43, 0.445);
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  z-index: 2400;
 }
 /*# sourceMappingURL=ListMenu.css.map */
