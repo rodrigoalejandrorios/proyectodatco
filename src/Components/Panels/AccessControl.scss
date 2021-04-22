@@ -2,7 +2,7 @@
 
 .control-panel {
   width: 75%;
-  margin-top: 5rem;
+  margin: 5rem auto 2rem auto;
   position: relative;
 }
 .panel-ac {
@@ -26,7 +26,6 @@
   display: flex;
   align-items: center;
   margin: 5px 0;
-  z-index: 1000;
   .checkbox-one {
     transform: scale(1.5);
     position: absolute;
@@ -48,9 +47,6 @@
     margin: 0.2em;
     height: 8rem;
     border-radius: 0.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     img {
       width: 3.2rem;
@@ -72,9 +68,7 @@
     height: 13rem;
     border-radius: 0.5em;
     background: $bg-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    list-style: none;
   }
   .chartline {
     width: 25rem;
@@ -100,8 +94,7 @@
     height: 13rem;
     border-radius: 0.5em;
     background: $bg-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    list-style: none;
   }
 }

@@ -11,6 +11,7 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
   const [access, setAccess] = useState(true);
   const [modal, setModal] = useState(false);
   const [client, setClient] = useState([]);
+  const [getItem, setGetItem] = useState(null);
 
   document.title = "Proyecto | Grupo DATCO";
 
@@ -56,7 +57,7 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
         />
       )}
       <Route exact path="/">
-        <PanelAdmin />
+        <PanelAdmin client={client} />
       </Route>
 
       {endpoint.length > 0 ? (

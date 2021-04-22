@@ -4,9 +4,8 @@
   background: $color-gradient-bottom;
   position: relative;
   width: 100%;
-  height: 150vh;
-
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 20px 0;
 }

@@ -1,0 +1,39 @@
+@import "../var.scss";
+
+.additem-cont {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  .form-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  select {
+    //background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 3em;
+    padding: 0 7px;
+    width: 25em;
+  }
+  button {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 13px 0 10px 0;
+    color: white;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 2.5rem;
+    background: $color-primary;
+    border: transparent;
+  }
+}

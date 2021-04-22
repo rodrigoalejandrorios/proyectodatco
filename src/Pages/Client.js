@@ -1,5 +1,6 @@
 import React from "react";
 import "./Client.css";
+import ListAC from "../Components/Panels/Lists/List";
 
 const Client = ({ client }) => {
   return (

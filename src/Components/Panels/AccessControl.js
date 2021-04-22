@@ -16,7 +16,9 @@ import llave from "../../Assets/llave.svg";
 import chartbars from "../../Assets/chartbars.svg";
 import cakechart from "../../Assets/cakechart.svg";
 
-const AccessControl = () => {
+const AccessControl = ({ infoitem }) => {
+  const [iditem, setIditem] = useState({});
+
   return (
     <>
       <div className="control-panel">
@@ -26,14 +28,43 @@ const AccessControl = () => {
         </div>
         <div className="cont-item-ac">
           <ul className="ul-item">
-            <Link to="/dangerpanel">
-              <ListAC key={uuidv4()} image={dangericon} alt={"dangericon"} />
-            </Link>
-            <ListAC key={uuidv4()} image={warningicon} alt={"warningicon"} />
-            <ListAC key={uuidv4()} image={personicon} alt={"personicon"} />
-            <ListAC key={uuidv4()} image={nopersons} alt={"nopersons"} />
-            <ListAC key={uuidv4()} image={tarjet} alt={"tarjet"} />
-            <ListAC key={uuidv4()} image={settingsicon} alt={"settingsicon"} />
+            <ListAC
+              key={uuidv4()}
+              image={dangericon}
+              alt={"dangericon"}
+              link={"/dangerpage"}
+            />
+
+            <ListAC
+              key={uuidv4()}
+              image={warningicon}
+              alt={"warningicon"}
+              link={"/warningpage"}
+            />
+            <ListAC
+              key={uuidv4()}
+              image={personicon}
+              alt={"personicon"}
+              link={"/personal"}
+            />
+            <ListAC
+              key={uuidv4()}
+              image={nopersons}
+              alt={"nopersons"}
+              link={"/adelantos"}
+            />
+            <ListAC
+              key={uuidv4()}
+              image={tarjet}
+              alt={"tarjet"}
+              link={"/marcadores"}
+            />
+            <ListAC
+              key={uuidv4()}
+              image={settingsicon}
+              alt={"settingsicon"}
+              link={"/settings-tools"}
+            />
           </ul>
         </div>
         <div className="segunda-fila">
@@ -43,20 +74,38 @@ const AccessControl = () => {
               image={chart}
               alt={"chart"}
               cname="chartline"
+              link={"/info-personal"}
             />
-            <ListAC key={uuidv4()} image={llave} alt={"llave"} cname="llave" />
+            <ListAC
+              key={uuidv4()}
+              image={llave}
+              alt={"llave"}
+              cname="llave"
+              link={"/ingresos"}
+            />
             <ListAC
               key={uuidv4()}
               image={personicon}
               alt={"personicon"}
               cname="person"
+              link={"/asistencia"}
             />
           </ul>
         </div>
         <div className="tercer-fila">
           <ul>
-            <ListAC key={uuidv4()} image={chartbars} alt={"chartbars"} />
-            <ListAC key={uuidv4()} image={cakechart} alt={"cakechart"} />
+            <ListAC
+              key={uuidv4()}
+              image={chartbars}
+              alt={"chartbars"}
+              link={"/informes"}
+            />
+            <ListAC
+              key={uuidv4()}
+              image={cakechart}
+              alt={"cakechart"}
+              link={"/comparaciones"}
+            />
           </ul>
         </div>
       </div>

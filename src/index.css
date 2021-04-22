@@ -9,6 +9,19 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(44, 51, 61);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
 code {
   font-family: "Inter", sans-serif;
 }
