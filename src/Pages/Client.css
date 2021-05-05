@@ -1,10 +1,35 @@
 .client-panel-bg {
   background: -webkit-gradient(linear, left top, left bottom, from(#30458b), to(#74cbf3));
   background: linear-gradient(180deg, #30458b 0%, #74cbf3 100%);
+  position: relative;
   width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cont-title-client {
+  position: relative;
+  margin-top: 9em;
+}
+
+.cont-title-client h1 {
+  text-align: center;
+  position: relative;
+  font-size: 4rem;
+  color: white;
+}
+
+.push-items {
+  position: relative;
+}
+
+.push-items .noitem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,11 +39,37 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 0;
+  height: 20em;
 }
 
-.client-panel-bg h1 {
-  font-size: 4rem;
-  color: white;
+.push-items .noitem h3 {
+  text-align: center;
+  font-size: 2.5em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.push-items ul {
+  margin: auto 6em;
+  margin-top: 1.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.push-items li {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  background: rgba(255, 255, 255, 0.205);
+  margin: 0.2em;
+  height: 8rem;
+  border-radius: 0.5em;
+}
+
+.push-items li img {
+  width: 3.2rem;
+  -webkit-filter: url(#drop-shadow);
+          filter: url(#drop-shadow);
 }
 /*# sourceMappingURL=Client.css.map */

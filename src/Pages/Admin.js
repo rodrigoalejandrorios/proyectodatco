@@ -3,8 +3,9 @@ import "./Admin.css";
 import AccessControl from "../Components/Panels/AccessControl";
 import Cctv from "../Components/Panels/CCTV";
 import AddItem from "../Components/AddItem";
+import SensorIoT from "../Components/Panels/SMIoT";
 
-const PanelAdmin = ({ client }) => {
+const PanelAdmin = ({ client, objStr, setObjStr, setGetItem }) => {
   const [infoitem, setInfoitem] = useState({});
 
   const handleInfoitem = (value) => {
@@ -14,9 +15,14 @@ const PanelAdmin = ({ client }) => {
   return (
     <>
       <div className="panel-bg">
-        <AccessControl infoitem={infoitem} />
+        <AccessControl objStr={objStr} setObjStr={setObjStr} />
         <Cctv />
-        <AddItem handleInfoitem={handleInfoitem} client={client} />
+        <SensorIoT />
+        <AddItem
+          handleInfoitem={handleInfoitem}
+          client={client}
+          setGetItem={setGetItem}
+        />
       </div>
     </>
   );

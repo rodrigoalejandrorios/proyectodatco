@@ -1,27 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ListAC = ({ image, alt, cname, link, info, toggleItem }) => {
-  const [check, setCheck] = useState(false);
-
-  const handleCheck = () => {
-    setCheck(!check);
-  };
+const ListCLI = ({ image, alt, cname, link }) => {
   return (
     <>
       <li>
-        <label
-          className="checkone"
-          style={{ position: "absolute", zIndex: "1" }}
-        >
-          <input
-            className="checkbox-one"
-            type="checkbox"
-            defaultChecked={check}
-            onChange={() => toggleItem(info.key)}
-          />
-        </label>
-
         <Link to={link}>
           <div
             style={{
@@ -41,4 +24,4 @@ const ListAC = ({ image, alt, cname, link, info, toggleItem }) => {
   );
 };
 
-export default ListAC;
+export default ListCLI;

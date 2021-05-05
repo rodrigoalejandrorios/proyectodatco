@@ -5,7 +5,7 @@ import closeicon from "../Assets/closeicon.svg";
 import { v4 as uuidv4 } from "uuid";
 
 const ModalAddClient = ({ handleModalClient, client, setClient, endpoint }) => {
-  const [values, handles, setValues] = useCustomForm();
+  const [values, handles, setValues] = useCustomForm({});
   const [modaloff, setModaloff] = useState();
 
   const handleForm = (e) => {
@@ -14,6 +14,7 @@ const ModalAddClient = ({ handleModalClient, client, setClient, endpoint }) => {
     endpoint.push(values);
     setClient([...client, values]);
     client.push((values.id = uuidv4()));
+    client.push((values.getItem = ""));
     handleModalClient(modaloff);
   };
 

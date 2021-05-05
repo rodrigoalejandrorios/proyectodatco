@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AddItem.css";
 
-const AddItem = ({ client, handleInfoitem }) => {
+const AddItem = ({ client, handleInfoitem, setGetItem }) => {
   const [additem, setAdditem] = useState({});
 
   const handleChange = (e) => {
@@ -9,7 +9,17 @@ const AddItem = ({ client, handleInfoitem }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleInfoitem(additem);
+    if (additem.value) {
+      handleInfoitem(additem.value);
+      setGetItem(additem.value);
+      client.map((cli) => {
+        if (cli.client == additem.value) {
+          cli.getItem = additem.value;
+        }
+      });
+    } else {
+      console.log("No hay cliente");
+    }
   };
   return (
     <>
@@ -29,7 +39,8 @@ const AddItem = ({ client, handleInfoitem }) => {
               );
             })}
           </select>
-          <button>Add Item to Client</button>
+
+          <button>Agregar items a clientes</button>
         </form>
       </div>
     </>

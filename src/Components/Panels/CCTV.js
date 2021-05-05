@@ -8,7 +8,7 @@ import nopersons from "../../Assets/nopersons.svg";
 
 const Cctv = () => {
   return (
-    <div className="cctv-panel">
+    <div className="control-panel">
       <div className="title-cctv">
         <h1>CCTV</h1>
       </div>

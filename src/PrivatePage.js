@@ -5,15 +5,19 @@ import ListMenu from "./Components/ListMenu";
 import PanelAdmin from "./Pages/Admin";
 import ModalAddClient from "./Components/AddClient";
 import Client from "./Pages/Client";
+import structure from "./Components/Panels/Structure";
 
-const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
+const PrivatePage = ({ authorized, handleBoolean, endpoint, setEndpoint }) => {
+  const [objStr, setObjStr] = useState(structure);
   const [menu, setMenu] = useState(false);
   const [access, setAccess] = useState(true);
   const [modal, setModal] = useState(false);
   const [client, setClient] = useState([]);
-  const [getItem, setGetItem] = useState(null);
+  const [getItem, setGetItem] = useState("");
 
   document.title = "Proyecto | Grupo DATCO";
+
+  console.log(endpoint);
 
   const handleModalClient = (boolean) => {
     setModal(boolean);
@@ -57,14 +61,20 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
         />
       )}
       <Route exact path="/">
-        <PanelAdmin client={client} />
+        <PanelAdmin
+          client={client}
+          endpoint={endpoint}
+          objStr={objStr}
+          setObjStr={setObjStr}
+          setGetItem={setGetItem}
+        />
       </Route>
 
       {endpoint.length > 0 ? (
         endpoint.map((info) => {
           return (
             <Route exact key={info.id} path={`/${info.endpoint}`}>
-              <Client {...info} />
+              <Client {...info} objStr={objStr} getItem={getItem} />
             </Route>
           );
         })
