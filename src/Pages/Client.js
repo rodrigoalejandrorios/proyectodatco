@@ -1,8 +1,10 @@
 import React from "react";
 import "./Client.css";
 import ListCLI from "../Components/Panels/Lists/ListCLI";
+import useGet from "../Utils/useAxios";
 
 const Client = ({ id, client, objStr, getItem }) => {
+  // const [client, isFetching, error] = useGet({ url: "/users" });
   return (
     <>
       <div className="client-panel-bg">

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./ListMenu.css";
 import datco from "../Assets/datco.svg";
 import closeicon from "../Assets/closeicon.svg";
+import useGet from "../Utils/useAxios";
 
 const clicktrue = {
   transition: "all 0.5s ease-in-out",
@@ -14,9 +15,11 @@ const clickfalse = {
   left: "-100%",
 };
 
-const ListMenu = ({ handleMenuAction, menu, handleModalClient, client }) => {
+const ListMenu = ({ handleMenuAction, menu, handleModalClient }) => {
   //Agregar clientes
+  const [client, isFetching, error] = useGet({ url: "/users" });
 
+  //console.log(username);
   const handleModalActive = () => {
     handleModalClient(true);
     handleMenuAction(false);
@@ -45,7 +48,7 @@ const ListMenu = ({ handleMenuAction, menu, handleModalClient, client }) => {
                   return (
                     <div onClick={handleCloseMenuAction} key={clientone.id}>
                       <Link key={clientone.id} to={clientone.endpoint}>
-                        <li key={clientone.id}>{clientone.client}</li>
+                        <li key={clientone.id}>{clientone.username}</li>
                       </Link>
                       <hr />
                     </div>
