@@ -1,15 +1,22 @@
 import { useState } from "react";
 import "./Client.css";
 import ListCLI from "../Components/Panels/Lists/ListCLI";
+import ListDevice from "../Components/Panels/Lists/ListDevice";
 import rain from "../Assets/weather/rain-w.svg";
 import Weather from "../Components/Weather";
+import GetDevices from "../Components/GetDevices";
+import settingsicon from "../Assets/settingsicon.svg";
 
 const Client = ({ id, username, objStr, getItem }) => {
   const [clima, setClima] = useState(false);
+  const [device, setDevice] = useState(false);
 
   const handleBoo = (state) => {
     setClima(state);
     // console.log(clima);
+  };
+  const handleDeviceBoo = (state) => {
+    setDevice(state);
   };
 
   return (
@@ -49,13 +56,22 @@ const Client = ({ id, username, objStr, getItem }) => {
         </div>
         <div className="cont-icons-cli">
           <ListCLI
+            handleBoo={handleBoo}
+            key={1}
             image={rain}
             alt="rain"
             cname="weather"
-            handleBoo={handleBoo}
+          />
+          <ListDevice
+            key={2}
+            image={settingsicon}
+            alt="rain"
+            cname="weather"
+            handleDeviceBoo={handleDeviceBoo}
           />
         </div>
         {clima ? <Weather handleBoo={handleBoo} /> : null}
+        {device ? <GetDevices handleDeviceBoo={handleDeviceBoo} /> : null}
       </div>
     </>
   );

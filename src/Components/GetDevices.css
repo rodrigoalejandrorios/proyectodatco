@@ -1,0 +1,77 @@
+.closeIconModal {
+  position: absolute;
+  margin: auto;
+  top: 10rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.377);
+  cursor: pointer;
+  padding: 5px;
+  width: 3.5rem;
+  height: 3.5rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.closeIconModal:hover {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background: rgba(0, 0, 0, 0.603);
+}
+
+.blur-modal-device {
+  position: fixed;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 19, 43, 0.445);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  z-index: -1;
+}
+
+.devicebox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2000;
+}
+
+.cont-boxdevice {
+  width: 60vh;
+  height: 50vh;
+  background: white;
+  border-radius: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: scroll;
+}
+/*# sourceMappingURL=GetDevices.css.map */

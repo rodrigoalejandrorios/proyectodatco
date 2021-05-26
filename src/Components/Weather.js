@@ -5,6 +5,7 @@ import sun from "../Assets/weather/sun.svg";
 import cloud from "../Assets/weather/cloud.svg";
 import rain from "../Assets/weather/rain.svg";
 import storm from "../Assets/weather/storm.svg";
+
 import "./Weather.css";
 
 const Weather = ({ handleBoo }) => {
@@ -80,18 +81,22 @@ const calcCelcius = (temp) => {
 
 const iconResult = (desc) => {
   switch (desc) {
-    case "clear sky": {
-      return <img src={sun} className="icon-weather" />;
-    }
-    case "few clouds" || "scattered clouds" || "broken clouds": {
+    case "clear sky":
+      <img src={sun} className="icon-weather" />;
+      break;
+    case "few clouds":
+    case "scattered clouds":
+    case "overcast clouds":
+    case "broken clouds":
       return <img src={cloud} className="icon-weather" />;
-    }
-    case "shower rain" || "rain": {
+
+    case "shower rain":
+    case "rain":
       return <img src={rain} className="icon-weather" />;
-    }
-    case "thunderstorm": {
+
+    case "thunderstorm":
       return <img src={storm} className="icon-weather" />;
-    }
+
     default: {
       return <img src={sun} className="icon-weather" />;
     }
