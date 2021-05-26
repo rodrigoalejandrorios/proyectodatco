@@ -1,0 +1,21 @@
+.li-list-cli {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.205);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5em;
+}
+
+.li-list-cli .weather {
+  width: 5em;
+}
+/*# sourceMappingURL=ListCLI.css.map */

@@ -1,0 +1,15 @@
+@import "../../../var.scss";
+
+.li-list-cli {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+  background: $bg-box;
+  align-items: center;
+  border-radius: 0.5em;
+  .weather {
+    width: 5em;
+  }
+}

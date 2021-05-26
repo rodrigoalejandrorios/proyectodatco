@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./ListMenu.css";
 import datco from "../Assets/datco.svg";
 import closeicon from "../Assets/closeicon.svg";
-import useGet from "../Utils/useAxios";
+import { useGet } from "../Utils/useAxios";
 
 const clicktrue = {
   transition: "all 0.5s ease-in-out",
@@ -41,8 +41,10 @@ const ListMenu = ({ handleMenuAction, menu, handleModalClient }) => {
               />
               <img className="logoDatco" src={datco} />
             </div>
+
             <ul className="list">
               <hr />
+
               {client.length > 0 ? (
                 client.map((clientone) => {
                   return (
@@ -77,7 +79,7 @@ const ListMenu = ({ handleMenuAction, menu, handleModalClient }) => {
                   return (
                     <div key={clientone.id}>
                       <Link to={clientone.endpoint}>
-                        <li>{clientone.client}</li>
+                        <li>{clientone.username}</li>
                       </Link>
                       <hr />
                     </div>

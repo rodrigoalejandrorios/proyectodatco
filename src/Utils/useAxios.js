@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 const axios = require("axios");
 const BASE_URL = "http://localhost:8000";
+
 const useGet = ({ url, initialState = [] }) => {
   const [data, setData] = useState(initialState);
   const [error, setError] = useState(false);
@@ -23,4 +24,20 @@ const useGet = ({ url, initialState = [] }) => {
   return [data, isFetching, error];
 };
 
-export default useGet;
+const usePost = () => {
+  const [response, setResponse] = useState(null);
+  const [fetching, setFetching] = useState(false);
+  const postData = async (url, object) => {
+    try {
+      setFetching(true); // ruedita cargando
+      const responseData = await axios.post(`${BASE_URL}/${url}`, object);
+      setResponse(responseData);
+      setFetching(false);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  return [postData, response, fetching];
+};
+
+export { useGet, usePost };

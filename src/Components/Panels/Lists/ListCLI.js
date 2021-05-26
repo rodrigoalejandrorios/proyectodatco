@@ -1,24 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./ListCLI.css";
 
-const ListCLI = ({ image, alt, cname, link }) => {
+const ListCLI = ({ handleBoo, image, alt, cname, link }) => {
+  const handleChange = () => {
+    handleBoo(true);
+  };
   return (
     <>
-      <li>
-        <Link to={link}>
-          <div
-            style={{
-              width: "100%",
-              position: "relative",
-              height: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img className={cname} src={image} alt={alt} />
-          </div>
-        </Link>
+      <li className="li-list-cli" onClick={handleChange}>
+        <div className="cont-list-cli">
+          <img className={cname} src={image} alt={alt} />
+        </div>
       </li>
     </>
   );

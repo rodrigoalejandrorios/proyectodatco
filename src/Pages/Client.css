@@ -72,4 +72,18 @@
   -webkit-filter: url(#drop-shadow);
           filter: url(#drop-shadow);
 }
+
+.cont-icons-cli {
+  width: 75%;
+  display: -ms-grid;
+  display: grid;
+  height: 12rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0.5rem;
+  margin: 3rem auto 2rem auto;
+}
 /*# sourceMappingURL=Client.css.map */

@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import useCustomForm from "../Utils/useForm";
+import { usePost } from "../Utils/useAxios";
 import "./AddClient.css";
 import closeicon from "../Assets/closeicon.svg";
-import { v4 as uuidv4 } from "uuid";
 
-const ModalAddClient = ({ handleModalClient, client, setClient, endpoint }) => {
+const ModalAddClient = ({ handleModalClient }) => {
   const [values, handles, setValues] = useCustomForm({});
+  const [postuser, respUser, fetchUser] = usePost();
   const [modaloff, setModaloff] = useState();
 
   const handleForm = (e) => {
     e.preventDefault();
     setValues({});
-    endpoint.push(values);
-    setClient([...client, values]);
-    client.push((values.id = uuidv4()));
-    client.push((values.getItem = ""));
-    handleModalClient(modaloff);
+    postuser("users", values);
+    console.log(respUser);
+    if (fetchUser == false) {
+      handleModalClient(modaloff);
+    }
   };
 
   const handleOff = () => {
@@ -28,12 +29,12 @@ const ModalAddClient = ({ handleModalClient, client, setClient, endpoint }) => {
         <img onClick={handleOff} src={closeicon} className="closeIconModal" />
         <div className="box-modal">
           <form onSubmit={handleForm}>
-            <p>Name Client</p>
+            <p>Name Username</p>
             <input
               type="text"
-              name="client"
-              placeholder="Name Client"
-              value={values.client || ""}
+              name="username"
+              placeholder="Name Username"
+              value={values.username || ""}
               onChange={handles}
               required
             />

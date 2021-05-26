@@ -1,0 +1,19 @@
+.blur-modal-clima {
+  position: fixed;
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 19, 43, 0.445);
+  transition: all 0.1s ease-in-out;
+}
+
+.weatherbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}

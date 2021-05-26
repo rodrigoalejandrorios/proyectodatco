@@ -14,24 +14,20 @@ const Cctv = () => {
       </div>
       <div className="cont-video">
         <div>
-          <h3>Face Recognition</h3>
-          <iframe
-            src="https://www.youtube.com/embed/wHn1_QVoXGM?controls=0"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <h3>Video Camera</h3>
+          <img
+            src={
+              "http://192.168.0.222/ISAPI/streaming/channels/102/httpPreview"
+            }
+          />
         </div>
         <div>
-          <h3>License Plate Recognition</h3>
-          <iframe
-            src="https://www.youtube.com/embed/72GNxtQHs54"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <h3>Thermal Camera</h3>
+          <img
+            src={
+              "http://192.168.0.222/ISAPI/streaming/channels/202/httpPreview"
+            }
+          />
         </div>
       </div>
       <div className="cont-tercerfila">

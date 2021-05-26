@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useGet } from "../Utils/useAxios";
 import "./AddItem.css";
 
 const AddItem = ({ client, handleInfoitem, setGetItem }) => {
   const [additem, setAdditem] = useState({});
+  const [user, isFetching, error] = useGet({ url: "/users" });
 
   const handleChange = (e) => {
     setAdditem({ ...additem, value: e.target.value });
@@ -31,10 +33,10 @@ const AddItem = ({ client, handleInfoitem, setGetItem }) => {
             <option selected={true} disabled="disabled">
               Elegir cliente
             </option>
-            {client.map((info) => {
+            {user.map((info) => {
               return (
                 <option value={additem.client} key={info.id}>
-                  {info.client}
+                  {info.username}
                 </option>
               );
             })}
