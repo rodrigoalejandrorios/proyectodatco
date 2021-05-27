@@ -1,0 +1,142 @@
+.weatherboxp {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2000;
+}
+
+.fetch {
+  color: #fff;
+}
+
+.cont-boxweatherp {
+  position: relative;
+  height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.123);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5em;
+}
+
+.cont-boxweatherp .weather {
+  width: 5em;
+}
+
+.cont-boxweatherp .lugar {
+  font-size: 4vh;
+  color: #fff;
+}
+
+.cont-boxweatherp p {
+  font-size: 30px;
+  margin-bottom: 1vh;
+  color: #fff;
+}
+
+.part-data-w {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-weather {
+  margin: 20px 0 0 0;
+  width: 16vh;
+}
+
+.grados-actual {
+  color: #fff;
+  font-size: 9vh;
+}
+
+.line-div {
+  width: 40vh;
+  height: 1px;
+  background-color: #fff;
+}
+
+.temp-mm {
+  margin-top: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30vh;
+}
+
+.temp-mm span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+.temp-mm h3:nth-child(1) > span:nth-child(2) {
+  font-size: 3.5vh;
+  color: #0142da;
+}
+
+.temp-mm h3:nth-child(2) > span:nth-child(2) {
+  font-size: 3.5vh;
+  color: #dc3545;
+}
+
+.refresh {
+  width: 2.5em;
+  height: 2.5em;
+  margin-top: 2vh;
+  background: rgba(255, 255, 255, 0.123);
+  color: black;
+  border-radius: 0.2em;
+  cursor: pointer;
+  position: absolute;
+  top: 0rem;
+  right: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.refresh img {
+  width: 2em;
+}
+/*# sourceMappingURL=WeatherPanel.css.map */

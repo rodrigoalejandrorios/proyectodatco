@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import useCustomForm from "../Utils/useForm";
-import datco from "../Assets/datco.svg";
+import datco from "../Assets/smlogo.png";
 import { v4 as uuidv4 } from "uuid";
 
 import "./Login.css";

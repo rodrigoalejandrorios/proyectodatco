@@ -4,6 +4,7 @@ import ListCLI from "../Components/Panels/Lists/ListCLI";
 import ListDevice from "../Components/Panels/Lists/ListDevice";
 import rain from "../Assets/weather/rain-w.svg";
 import Weather from "../Components/Weather";
+import WeatherPanel from "../Components/WeatherPanel";
 import GetDevices from "../Components/GetDevices";
 import settingsicon from "../Assets/settingsicon.svg";
 
@@ -55,13 +56,14 @@ const Client = ({ id, username, objStr, getItem }) => {
           </div>
         </div>
         <div className="cont-icons-cli">
-          <ListCLI
+          {/* <ListCLI
             handleBoo={handleBoo}
             key={1}
             image={rain}
             alt="rain"
             cname="weather"
-          />
+          /> */}
+          <WeatherPanel />
           <ListDevice
             key={2}
             image={settingsicon}

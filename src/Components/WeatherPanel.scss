@@ -1,0 +1,102 @@
+@import "../var.scss";
+
+.weatherboxp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.fetch {
+  color: #fff;
+}
+
+.cont-boxweatherp {
+  position: relative;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+  background: $bg-box-title;
+  align-items: center;
+  border-radius: 0.5em;
+  .weather {
+    width: 5em;
+  }
+  .lugar {
+    font-size: 4vh;
+    color: #fff;
+  }
+
+  p {
+    font-size: 30px;
+    margin-bottom: 1vh;
+    color: #fff;
+  }
+}
+
+.part-data-w {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-weather {
+  margin: 20px 0 0 0;
+  width: 16vh;
+}
+
+.grados-actual {
+  color: #fff;
+  font-size: 9vh;
+}
+
+.line-div {
+  width: 40vh;
+  height: 1px;
+  background-color: #fff;
+}
+
+.temp-mm {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+  width: 30vh;
+  span {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  }
+  h3:nth-child(1) > span:nth-child(2) {
+    font-size: 3.5vh;
+    color: $color-primary;
+  }
+  h3:nth-child(2) > span:nth-child(2) {
+    font-size: 3.5vh;
+    color: $color-danger;
+  }
+}
+
+.refresh {
+  width: 2.5em;
+  height: 2.5em;
+  margin-top: 2vh;
+  background: $bg-box-title;
+  color: rgb(0, 0, 0);
+  border-radius: 0.2em;
+  cursor: pointer;
+  position: absolute;
+  top: 0rem;
+  right: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 2em;
+  }
+}

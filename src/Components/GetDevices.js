@@ -5,7 +5,8 @@ import closeicon from "../Assets/closeicon.svg";
 
 const GetDevices = ({ handleDeviceBoo }) => {
   const [device, isFetching, error] = useGet({ url: "/devices" });
-  console.log(device);
+  const { data } = device;
+  console.log(data);
   const handleChange = () => {
     handleDeviceBoo(false);
   };
@@ -31,11 +32,17 @@ const GetDevices = ({ handleDeviceBoo }) => {
             className="closeIconModal"
           />
           <div className="cont-boxdevice">
-            {device.map((info) => {
-              {
-                Data(info.time, info.data);
-              }
-            })}
+            <div className="title-fecha">
+              <h3>Entradas y salidas</h3>
+              <h3>Fecha y hora</h3>
+            </div>
+            <div className="date-dispatch">
+              <div className="cont-data">
+                {data.map((info) => {
+                  return Data(info.time, info.seqNumber);
+                })}
+              </div>
+            </div>
           </div>
           <div className="blur-modal-device"></div>
         </div>
@@ -45,10 +52,31 @@ const GetDevices = ({ handleDeviceBoo }) => {
 };
 
 const Data = (time, data) => {
-  <h3>
-    <span className="">{time}</span>
-    <span className="">{data}</span>
-  </h3>;
+  let timeconv = new Date(time);
+  let timeformar = timeconv.toLocaleString();
+  return (
+    <>
+      <div className="datadev">
+        <p className="entradasalida">
+          {data % 2 == 0 ? (
+            <span className="spanpar">
+              <div className="point-device"></div>Entradas
+            </span>
+          ) : (
+            <span className="spanimpar">
+              <div className="point-device-red"></div>Salidas
+            </span>
+          )}
+        </p>
+        <p className="fecha">
+          <span>{timeformar}</span>
+        </p>
+      </div>
+      <div className="f-hr">
+        <div className="hr-dev"></div>
+      </div>
+    </>
+  );
 };
 
 export default GetDevices;

@@ -6,6 +6,7 @@ const useGet = ({ url, initialState = [] }) => {
   const [data, setData] = useState(initialState);
   const [error, setError] = useState(false);
   const [isFetching, setFeching] = useState(true);
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     const get = async () => {
@@ -21,7 +22,7 @@ const useGet = ({ url, initialState = [] }) => {
     };
     get();
   }, [url]);
-  return [data, isFetching, error];
+  return [data, isFetching, setFeching, error];
 };
 
 const usePost = () => {

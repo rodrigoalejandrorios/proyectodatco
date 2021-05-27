@@ -6,7 +6,7 @@ import "./Menu.css";
 import downicon from "../Assets/downicon.svg";
 import profileicon from "../Assets/profileicon.svg";
 import hambicon from "../Assets/hambicon.svg";
-import datco from "../Assets/datco.svg";
+import datco from "../Assets/smlogo.png";
 import logout from "../Assets/logout.svg";
 import clip from "../Assets/clip.svg";
 

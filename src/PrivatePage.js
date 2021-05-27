@@ -16,20 +16,9 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint, setEndpoint }) => {
   const [client, setClient] = useState([]);
   const [getItem, setGetItem] = useState("");
   const [user, isFetching, error] = useGet({ url: "/users" });
-  const [device, isFetchingD, errorD] = useGet({ url: "/devices" });
-
-  //Accion clima
-  const [weather, setWeather] = useState(false);
-  console.log(device);
-
   document.title = "Proyecto | Grupo DATCO";
 
   console.log(endpoint);
-
-  //Accion Clima
-  const hanldeWeather = (wboo) => {
-    setWeather(wboo);
-  };
 
   const handleModalClient = (boolean) => {
     setModal(boolean);
@@ -86,12 +75,7 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint, setEndpoint }) => {
         user.map((info) => {
           return (
             <Route exact key={info.id} path={`/${info.endpoint}`}>
-              <Client
-                hanldeWeather={hanldeWeather}
-                {...info}
-                objStr={objStr}
-                getItem={getItem}
-              />
+              <Client {...info} objStr={objStr} getItem={getItem} />
             </Route>
           );
         })

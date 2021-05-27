@@ -3,7 +3,7 @@
 .closeIconModal {
   position: absolute;
   margin: auto;
-  top: 10rem;
+  top: 8rem;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.377);
   cursor: pointer;
@@ -45,10 +45,91 @@
   width: 60vh;
   height: 50vh;
   background: white;
-  border-radius: 2vh;
+  border-radius: 0.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.title-fecha {
+  top: 256px;
+  width: 60vh;
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 5vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  align-items: center;
+
+  h3 {
+    margin-left: 3vh;
+  }
+}
+
+.date-dispatch {
+  width: 100%;
   overflow-y: scroll;
+  height: 100%;
+}
+
+.cont-data {
+  width: 100%;
+  margin-top: 1.5vh;
+}
+
+.datadev {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.f-hr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .hr-dev {
+    width: 52vh;
+    background: rgba(0, 0, 0, 0.2);
+    height: 1px;
+  }
+}
+
+.fecha {
+  margin: 1vh 0 1vh 4vh;
+  span {
+    font-size: 15px;
+  }
+}
+
+.entradasalida {
+  margin: 1vh 0 1vh 4vh;
+  span {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+  }
+  .icon-green {
+    width: 1.5vh;
+    height: 1.5vh;
+    background: $color-success;
+    border-radius: 50%;
+    margin-right: 0.5vh;
+  }
+
+  .point-device {
+    width: 1.5vh;
+    height: 1.5vh;
+    background: $color-success;
+    border-radius: 50%;
+    margin-right: 0.5vh;
+  }
+  .point-device-red {
+    width: 1.5vh;
+    height: 1.5vh;
+
+    border-radius: 50%;
+    margin-right: 0.5vh;
+    background: $color-danger;
+  }
 }
