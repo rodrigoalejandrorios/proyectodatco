@@ -15,10 +15,12 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint, setEndpoint }) => {
   const [modal, setModal] = useState(false);
   const [client, setClient] = useState([]);
   const [getItem, setGetItem] = useState("");
-  const [user, isFetching, error] = useGet({ url: "/users" });
-  document.title = "Proyecto | Grupo DATCO";
 
-  console.log(endpoint);
+  //Render y Actualización de Usuarios
+  const [user, isFetching, error] = useGet({ url: "/users" });
+  const [postuser, setPostuser] = useState(null);
+  const [fetchpost, setFetchpost] = useState(true);
+  document.title = "Proyecto | Grupo DATCO";
 
   const handleModalClient = (boolean) => {
     setModal(boolean);
@@ -48,17 +50,17 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint, setEndpoint }) => {
         handleMenuAction={handleMenuAction}
         menu={menu}
         handleModalClient={handleModalClient}
-        client={client}
+        postuser={postuser}
+        setFetchpost={setFetchpost}
+        fetchpost={fetchpost}
       />
       {!modal ? (
         <div></div>
       ) : (
         <ModalAddClient
-          modal={modal}
           handleModalClient={handleModalClient}
-          client={client}
-          endpoint={endpoint}
-          setClient={setClient}
+          setPostuser={setPostuser}
+          setFetchpost={setFetchpost}
         />
       )}
       <Route exact path="/">

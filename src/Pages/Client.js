@@ -56,24 +56,10 @@ const Client = ({ id, username, objStr, getItem }) => {
           </div>
         </div>
         <div className="cont-icons-cli">
-          {/* <ListCLI
-            handleBoo={handleBoo}
-            key={1}
-            image={rain}
-            alt="rain"
-            cname="weather"
-          /> */}
           <WeatherPanel />
-          <ListDevice
-            key={2}
-            image={settingsicon}
-            alt="rain"
-            cname="weather"
-            handleDeviceBoo={handleDeviceBoo}
-          />
+
+          <GetDevices handleDeviceBoo={handleDeviceBoo} />
         </div>
-        {clima ? <Weather handleBoo={handleBoo} /> : null}
-        {device ? <GetDevices handleDeviceBoo={handleDeviceBoo} /> : null}
       </div>
     </>
   );

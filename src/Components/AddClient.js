@@ -1,22 +1,31 @@
 import React, { useState } from "react";
 import useCustomForm from "../Utils/useForm";
-import { usePost } from "../Utils/useAxios";
 import "./AddClient.css";
 import closeicon from "../Assets/closeicon.svg";
+const axios = require("axios");
+const BASE_URL = "http://localhost:8000/";
 
-const ModalAddClient = ({ handleModalClient }) => {
+const ModalAddClient = ({ handleModalClient, setPostuser }) => {
   const [values, handles, setValues] = useCustomForm({});
-  const [postuser, respUser, fetchUser] = usePost();
+  //const [post, data, isFetching] = usePost();
   const [modaloff, setModaloff] = useState();
+
+  const post = async (url, object) => {
+    try {
+      const { data } = await axios.post(url, object);
+      setPostuser(data);
+      setModaloff(false);
+      handleModalClient(modaloff);
+      window.location.reload();
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const handleForm = (e) => {
     e.preventDefault();
     setValues({});
-    postuser("users", values);
-    console.log(respUser);
-    if (fetchUser == false) {
-      handleModalClient(modaloff);
-    }
+    post(`${BASE_URL}users`, values);
   };
 
   const handleOff = () => {

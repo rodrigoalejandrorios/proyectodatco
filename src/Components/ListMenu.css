@@ -71,7 +71,7 @@
 .cont-icons .closeicon:hover {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background: rgba(255, 255, 255, 0.068);
+  background: rgba(255, 255, 255, 0.123);
 }
 
 .cont-icons .logoDatco {
@@ -117,7 +117,7 @@
 .list li:hover {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background: rgba(255, 255, 255, 0.068);
+  background: rgba(255, 255, 255, 0.123);
 }
 
 .list p {

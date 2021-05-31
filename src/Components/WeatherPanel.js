@@ -9,14 +9,15 @@ import storm from "../Assets/weather/storm.svg";
 import "./WeatherPanel.css";
 
 const WeatherPanel = () => {
-  const [weat, isFetching, setFetching, error] = useGet({
+  const [weat, isFetching, setFetching, get, error] = useGet({
     url: "/weather",
   });
-  const handleChange = async () => {
+  const handleChange = () => {
     setTimeout(() => {
       setFetching(false);
+      get();
     }, 2000);
-    await setFetching(true);
+    setFetching(true);
   };
   console.log(weat);
   return (
@@ -80,8 +81,8 @@ const calcCelcius = (temp) => {
 const iconResult = (desc) => {
   switch (desc) {
     case "clear sky":
-      <img src={sun} className="icon-weather" />;
-      break;
+      return <img src={sun} className="icon-weather" />;
+
     case "few clouds":
     case "scattered clouds":
     case "overcast clouds":

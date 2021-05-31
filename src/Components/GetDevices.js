@@ -14,56 +14,45 @@ const GetDevices = ({ handleDeviceBoo }) => {
     <>
       {isFetching ? (
         <div className="devicebox">
-          <img
-            onClick={handleChange}
-            src={closeicon}
-            className="closeIconModal"
-          />
           <div className="cont-boxdevice">
             <h1>Cargando...</h1>
           </div>
-          <div className="blur-modal-device"></div>
         </div>
       ) : (
         <div className="devicebox">
-          <img
-            onClick={handleChange}
-            src={closeicon}
-            className="closeIconModal"
-          />
           <div className="cont-boxdevice">
             <div className="title-fecha">
               <h3>Entradas y salidas</h3>
               <h3>Fecha y hora</h3>
             </div>
+
             <div className="date-dispatch">
               <div className="cont-data">
                 {data.map((info) => {
-                  return Data(info.time, info.seqNumber);
+                  return <Data {...info} />;
                 })}
               </div>
             </div>
           </div>
-          <div className="blur-modal-device"></div>
         </div>
       )}
     </>
   );
 };
 
-const Data = (time, data) => {
+const Data = ({ seqNumber, time }) => {
   let timeconv = new Date(time);
   let timeformar = timeconv.toLocaleString();
   return (
     <>
       <div className="datadev">
         <p className="entradasalida">
-          {data % 2 == 0 ? (
-            <span className="spanpar">
+          {seqNumber % 2 == 0 ? (
+            <span key={seqNumber} className="spanpar">
               <div className="point-device"></div>Entradas
             </span>
           ) : (
-            <span className="spanimpar">
+            <span key={seqNumber} className="spanimpar">
               <div className="point-device-red"></div>Salidas
             </span>
           )}

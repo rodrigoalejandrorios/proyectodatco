@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./ListMenu.css";
 import datco from "../Assets/datco.svg";
 import closeicon from "../Assets/closeicon.svg";
 import { useGet } from "../Utils/useAxios";
+import { get } from "react-hook-form";
+const axios = require("axios");
+const BASE_URL = "http://localhost:8000/";
 
 const clicktrue = {
   transition: "all 0.5s ease-in-out",
@@ -15,9 +18,30 @@ const clickfalse = {
   left: "-100%",
 };
 
-const ListMenu = ({ handleMenuAction, menu, handleModalClient }) => {
+const ListMenu = ({
+  handleMenuAction,
+  menu,
+  handleModalClient,
+  fetchpost,
+  postuser,
+}) => {
   //Agregar clientes
-  const [client, isFetching, error] = useGet({ url: "/users" });
+  //const [client, isFetching, error] = useGet({ url: "/users" });
+  const [client, setClient] = useState([]);
+
+  const get = async () => {
+    try {
+      const { data } = await axios.get(`${BASE_URL}users`);
+      setClient(data);
+      console.log(postuser);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    get();
+  }, []);
 
   //console.log(username);
   const handleModalActive = () => {
