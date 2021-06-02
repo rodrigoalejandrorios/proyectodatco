@@ -1,15 +1,11 @@
 import React from "react";
 import { useGet } from "../Utils/useAxios";
 import "./GetDevices.css";
-import closeicon from "../Assets/closeicon.svg";
 
-const GetDevices = ({ handleDeviceBoo }) => {
+const GetDevices = () => {
   const [device, isFetching, error] = useGet({ url: "/devices" });
   const { data } = device;
-  console.log(data);
-  const handleChange = () => {
-    handleDeviceBoo(false);
-  };
+
   return (
     <>
       {isFetching ? (

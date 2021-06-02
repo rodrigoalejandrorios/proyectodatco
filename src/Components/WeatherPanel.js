@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { useGet } from "../Utils/useAxios";
 import reload from "../Assets/reload.svg";
 import sun from "../Assets/weather/sun.svg";
@@ -8,16 +8,17 @@ import storm from "../Assets/weather/storm.svg";
 
 import "./WeatherPanel.css";
 
-const WeatherPanel = () => {
-  const [weat, isFetching, setFetching, get, error] = useGet({
+const WeatherPanel = ({ location }) => {
+  const [weat, isFetching, setFetching, getter, error] = useGet({
     url: "/weather",
+    ubic: location,
   });
-  const handleChange = () => {
-    setTimeout(() => {
-      setFetching(false);
-      get();
-    }, 2000);
-    setFetching(true);
+  console.log(location);
+
+  const handleChange = async () => {
+    await setFetching(true);
+    await getter();
+    await setFetching(false);
   };
   console.log(weat);
   return (

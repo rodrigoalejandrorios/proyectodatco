@@ -1,0 +1,143 @@
+.cont-title-assis {
+  margin: 2em 15em 0.5em 15em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.123);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cont-title-assis .title-assis {
+  padding: 0.5em 0;
+  font-size: 4vh;
+  color: white;
+}
+
+.panel-assistance {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 8px;
+  width: 75%;
+  margin: auto;
+}
+
+.panel-assistance .separ-assis {
+  height: 1.5px;
+  width: 55%;
+  background: rgba(255, 255, 255, 0.247);
+}
+
+.panel-assistance .asistencias {
+  width: 100%;
+  border-radius: 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.123);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 25vh;
+}
+
+.panel-assistance .asistencias .title {
+  margin-bottom: 0.5em;
+  color: #fff;
+  text-align: center;
+}
+
+.panel-assistance .asistencias .data-assis {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.panel-assistance .asistencias .data-assis img {
+  width: 7em;
+}
+
+.panel-assistance .asistencias .data-assis .num-assis {
+  color: #fff;
+  font-size: 10vh;
+}
+
+.panel-assistance .ausencias {
+  border-radius: 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.123);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.panel-assistance .ausencias .title {
+  margin-bottom: 0.5em;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+.panel-assistance .ausencias .num-aus {
+  color: #fff;
+  font-size: 13vh;
+}
+
+.panel-assistance .ausenciascert {
+  border-radius: 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.123);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.panel-assistance .ausenciascert .title {
+  margin-bottom: 0.5em;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+.panel-assistance .ausenciascert .num-aus {
+  color: #fff;
+  font-size: 13vh;
+}
+/*# sourceMappingURL=Assistance.css.map */

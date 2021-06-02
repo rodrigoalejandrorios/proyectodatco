@@ -84,6 +84,7 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint, setEndpoint }) => {
       ) : (
         <div></div>
       )}
+
       <Route exact path="/dangerpanel">
         <DangerPanel />
       </Route>

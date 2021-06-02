@@ -1,0 +1,55 @@
+.box-graph {
+  position: relative;
+  padding: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.123);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5em;
+}
+
+.box-graph h1 {
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+
+.box-pie {
+  position: relative;
+  padding: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.123);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5em;
+}
+
+.box-pie h1 {
+  color: #fff;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+/*# sourceMappingURL=Graph.css.map */

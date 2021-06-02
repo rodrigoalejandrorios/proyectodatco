@@ -1,30 +1,21 @@
 import { useState } from "react";
 import "./Client.css";
 import ListCLI from "../Components/Panels/Lists/ListCLI";
-import ListDevice from "../Components/Panels/Lists/ListDevice";
-import rain from "../Assets/weather/rain-w.svg";
-import Weather from "../Components/Weather";
+import GraphOne from "../Components/Charts/Graph";
+import { PieModule, PositivosReales } from "../Components/Charts/Pie";
+import Assistance from "../Components/Panels/PClient/Assistance";
 import WeatherPanel from "../Components/WeatherPanel";
 import GetDevices from "../Components/GetDevices";
-import settingsicon from "../Assets/settingsicon.svg";
+import qui from "../Assets/qui.png";
+import sg from "../Assets/sg.png";
 
-const Client = ({ id, username, objStr, getItem }) => {
-  const [clima, setClima] = useState(false);
-  const [device, setDevice] = useState(false);
-
-  const handleBoo = (state) => {
-    setClima(state);
-    // console.log(clima);
-  };
-  const handleDeviceBoo = (state) => {
-    setDevice(state);
-  };
-
+const Client = ({ username, objStr, getItem, location }) => {
   return (
     <>
       <div className="client-panel-bg">
         <div className="cont-title-client">
           <h1>Bienvenido {username}</h1>
+          <LogoOutput username={username} />
         </div>
         <div className="push-items">
           {username === getItem ? (
@@ -34,7 +25,7 @@ const Client = ({ id, username, objStr, getItem }) => {
               })}
             </ul>
           ) : null}
-          <div className="control-panel">
+          <div className="cctv-panel">
             <div className="cont-video">
               <div>
                 <h3>Video Camera</h3>
@@ -56,13 +47,34 @@ const Client = ({ id, username, objStr, getItem }) => {
           </div>
         </div>
         <div className="cont-icons-cli">
-          <WeatherPanel />
-
-          <GetDevices handleDeviceBoo={handleDeviceBoo} />
+          <WeatherPanel location={location} />
+          <GetDevices />
         </div>
+        <Assistance />
+        <div className="cont-icons-covid">
+          <h1 className="Title-covid">Tabla Covid-19</h1>
+        </div>
+        <div className="cont-icons-dos">
+          <PieModule />
+          <PositivosReales />
+          <GraphOne />
+        </div>
+
+        {/**Veeeeeeeeeeeeeeeeeeeeeer */}
       </div>
     </>
   );
+};
+
+const LogoOutput = ({ username }) => {
+  switch (username) {
+    case "Quilmes":
+      return <img src={qui} alt={"Quilmes-logo"} />;
+    case "Saint Gobain":
+      return <img src={sg} alt={"Saint Gobain-logo"} />;
+    default:
+      return null;
+  }
 };
 
 export default Client;

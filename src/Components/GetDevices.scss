@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
 }
 
 .title-fecha {
@@ -32,6 +31,10 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  h1 {
+    color: #fff;
+  }
 }
 
 .date-dispatch {

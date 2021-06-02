@@ -42,7 +42,7 @@ const ModalAddClient = ({ handleModalClient, setPostuser }) => {
             <input
               type="text"
               name="username"
-              placeholder="Name Username"
+              placeholder="Usernamme"
               value={values.username || ""}
               onChange={handles}
               required
@@ -69,8 +69,17 @@ const ModalAddClient = ({ handleModalClient, setPostuser }) => {
             <input
               type="text"
               name="endpoint"
-              placeholder="Name of endpoint"
+              placeholder="Endpoint name"
               value={values.endpoint || ""}
+              onChange={handles}
+              required
+            />
+            <p>Location</p>
+            <input
+              type="text"
+              name="location"
+              placeholder="Location name"
+              value={values.location || ""}
               onChange={handles}
               required
             />
