@@ -58,6 +58,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 50%;
+  max-width: 30em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

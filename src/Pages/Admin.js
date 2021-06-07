@@ -22,6 +22,7 @@ const PanelAdmin = ({ client, objStr, setObjStr, setGetItem }) => {
           handleInfoitem={handleInfoitem}
           client={client}
           setGetItem={setGetItem}
+          objStr={objStr}
         />
       </div>
     </>

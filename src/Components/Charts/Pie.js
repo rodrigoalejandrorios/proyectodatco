@@ -14,7 +14,7 @@ const PieModule = () => {
   return (
     <>
       <div className="box-pie">
-        <h1>Aisaldos por sexo</h1>
+        <h1>Aislados por sexo</h1>
         <BarChart width={250} height={250} data={fym}>
           <CartesianGrid strokeDasharray="3 3" stroke="#fff" />
           <XAxis dataKey="name" stroke="#fff" />

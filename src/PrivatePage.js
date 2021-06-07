@@ -8,7 +8,7 @@ import Client from "./Pages/Client";
 import structure from "./Components/Panels/Structure";
 import { useGet } from "./Utils/useAxios";
 
-const PrivatePage = ({ authorized, handleBoolean, endpoint, setEndpoint }) => {
+const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
   const [objStr, setObjStr] = useState(structure);
   const [menu, setMenu] = useState(false);
   const [access, setAccess] = useState(true);

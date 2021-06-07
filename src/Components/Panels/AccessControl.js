@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import "./AccessControl.css";
 import structure from "./Structure";
 import ListAC from "./Lists/List";
-import useGet from "../../Utils/useAxios";
 
 const AccessControl = ({ objStr, setObjStr }) => {
   // [client, isFetching, error] = useGet({ url: "/users" });

@@ -14,7 +14,7 @@ const GraphOne = () => {
   return (
     <>
       <div className="box-graph">
-        <h1>Aisaldos por posible Covid-19</h1>
+        <h1>Aislados por posible Covid-19</h1>
         <AreaChart
           width={650}
           height={250}

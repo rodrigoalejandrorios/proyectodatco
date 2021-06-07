@@ -1,9 +1,9 @@
 //Estructura de datos para renderizar ITEMS
 
-import dangericon from "../../Assets/dangericon.svg";
-import warningicon from "../../Assets/warningicon.svg";
+import cameraseg from "../../Assets/cameraseg.svg";
+import cloud from "../../Assets/weather/rain-w.svg";
 import personicon from "../../Assets/personicon.svg";
-import nopersons from "../../Assets/nopersons.svg";
+import covid from "../../Assets/covid.svg";
 import tarjet from "../../Assets/tarjet.svg";
 import settingsicon from "../../Assets/settingsicon.svg";
 import chart from "../../Assets/chart.svg";
@@ -13,23 +13,23 @@ import cakechart from "../../Assets/cakechart.svg";
 
 const structure = [
   {
-    key: "item001",
-    image: dangericon,
-    alt: "dangericon",
+    key: 1,
+    image: cameraseg,
+    alt: "cameraseg",
     cname: null,
-    link: "/dangerpanel",
+    link: "/camera",
     values: false,
   },
   {
-    key: "item002",
-    image: warningicon,
+    key: 2,
+    image: cloud,
     alt: "warningicon",
     cname: null,
     link: "/warningpage",
     values: false,
   },
   {
-    key: "item003",
+    key: 3,
     image: personicon,
     alt: "personicon",
     cname: null,
@@ -37,16 +37,16 @@ const structure = [
     values: false,
   },
   {
-    key: "item004",
-    image: nopersons,
+    key: 4,
+    image: tarjet,
     alt: "nopersons",
     cname: null,
     link: "/adelantos",
     values: false,
   },
   {
-    key: "item005",
-    image: tarjet,
+    key: 5,
+    image: covid,
     alt: "tarjet",
     cname: null,
     link: "/marcadores",
