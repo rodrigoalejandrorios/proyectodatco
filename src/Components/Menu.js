@@ -9,9 +9,14 @@ import hambicon from "../Assets/hambicon.svg";
 import datco from "../Assets/smlogo.png";
 import logout from "../Assets/logout.svg";
 import clip from "../Assets/clip.svg";
+import additem from "../Assets/additem.svg";
 
-const Menu = ({ handleMenuAction, handleAccess }) => {
+const Menu = ({ handleMenuAction, handleAccess, handleAddItem }) => {
   const [usermenu, setUsermenu] = useState(false);
+
+  const onHandleAddItem = () => {
+    handleAddItem(true);
+  };
 
   const handleStateMenu = () => {
     handleMenuAction(true);
@@ -38,14 +43,17 @@ const Menu = ({ handleMenuAction, handleAccess }) => {
             <img className="datcoicon" src={datco} />
           </Link>
         </div>
-        <div className="cont-right" onClick={handleUserMenu}>
-          <img className="downicon" src={downicon} />
-          <img className="profileicon" src={profileicon} />
-          {usermenu ? (
-            <ToggleMenu handleAccessToggle={handleAccessToggle} />
-          ) : (
-            <div></div>
-          )}
+        <div className="cont-right">
+          <img className="addicon" src={additem} onClick={onHandleAddItem} />
+          <div className="cont-right-toggle" onClick={handleUserMenu}>
+            <img className="downicon" src={downicon} />
+            <img className="profileicon" src={profileicon} />
+            {usermenu ? (
+              <ToggleMenu handleAccessToggle={handleAccessToggle} />
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
       </div>
     </>

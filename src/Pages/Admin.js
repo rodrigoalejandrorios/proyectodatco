@@ -5,7 +5,7 @@ import Cctv from "../Components/Panels/CCTV";
 import AddItem from "../Components/AddItem";
 import SensorIoT from "../Components/Panels/SMIoT";
 
-const PanelAdmin = ({ client, objStr, setObjStr, setGetItem }) => {
+const PanelAdmin = ({ objStr, setObjStr, onadditem, handleAddItem }) => {
   const [infoitem, setInfoitem] = useState({});
 
   const handleInfoitem = (value) => {
@@ -20,9 +20,9 @@ const PanelAdmin = ({ client, objStr, setObjStr, setGetItem }) => {
         <SensorIoT />
         <AddItem
           handleInfoitem={handleInfoitem}
-          client={client}
-          setGetItem={setGetItem}
           objStr={objStr}
+          handleAddItem={handleAddItem}
+          onadditem={onadditem}
         />
       </div>
     </>

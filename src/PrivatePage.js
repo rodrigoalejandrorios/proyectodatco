@@ -16,11 +16,17 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
   const [client, setClient] = useState([]);
   const [getItem, setGetItem] = useState("");
 
+  const [onadditem, setOnaddItem] = useState(false);
+
   //Render y Actualización de Usuarios
   const [user, isFetching, error] = useGet({ url: "/users" });
   const [postuser, setPostuser] = useState(null);
   const [fetchpost, setFetchpost] = useState(true);
   document.title = "Proyecto | Grupo DATCO";
+
+  const handleAddItem = (value) => {
+    setOnaddItem(value);
+  };
 
   const handleModalClient = (boolean) => {
     setModal(boolean);
@@ -45,7 +51,11 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
 
   return (
     <>
-      <Menu handleMenuAction={handleMenuAction} handleAccess={handleAccess} />
+      <Menu
+        handleMenuAction={handleMenuAction}
+        handleAccess={handleAccess}
+        handleAddItem={handleAddItem}
+      />
       <ListMenu
         handleMenuAction={handleMenuAction}
         menu={menu}
@@ -65,6 +75,8 @@ const PrivatePage = ({ authorized, handleBoolean, endpoint }) => {
       )}
       <Route exact path="/">
         <PanelAdmin
+          handleAddItem={handleAddItem}
+          onadditem={onadditem}
           client={client}
           endpoint={endpoint}
           objStr={objStr}

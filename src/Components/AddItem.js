@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { useGet } from "../Utils/useAxios";
 import * as axios from "axios";
+import load from "../Assets/load.svg";
+import closeicon from "../Assets/closeicon.svg";
 import "./AddItem.css";
 
-const AddItem = ({ client, handleInfoitem, setGetItem, objStr }) => {
+const AddItem = ({ objStr, onadditem, handleAddItem }) => {
   const BASE_URL = "http://localhost:8000/users";
   const [additem, setAdditem] = useState({});
   const [user, isFetching, error] = useGet({ url: "/users" });
-  console.log(objStr[0].values);
+
+  const closeHandleAdd = () => {
+    handleAddItem(false);
+  };
 
   const object = {
     role: 0,
@@ -34,32 +39,67 @@ const AddItem = ({ client, handleInfoitem, setGetItem, objStr }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     user.map((cli) => {
-      updateData(cli.id);
+      if (additem.value == cli.username) return updateData(cli.id);
     });
-    window.location.reload();
   };
   return (
     <>
-      <div className="additem-cont">
-        <h1>Alta de items para clientes</h1>
-        <form onSubmit={handleSubmit} className="form-item">
-          <label htmlFor="client"></label>
-          <select value={additem.value} name="client" onChange={handleChange}>
-            <option selected={true} disabled="disabled">
-              Elegir cliente
-            </option>
-            {user.map((info) => {
-              return (
-                <option value={additem.client} key={info.id}>
-                  {info.username}
-                </option>
-              );
-            })}
-          </select>
+      {onadditem ? (
+        <div className="additem-cont">
+          <div className="rela-add">
+            <div className="close-icon">
+              <img src={closeicon} onClick={closeHandleAdd} />
+            </div>
+            <h1>Alta de items para clientes</h1>
+            <form onSubmit={handleSubmit} className="form-item">
+              <div className="select">
+                <select
+                  value={additem.value}
+                  name="client"
+                  onChange={handleChange}
+                  required
+                >
+                  <option selected={true} disabled="disabled">
+                    Elegir cliente
+                  </option>
+                  {user.map((info) => {
+                    return (
+                      <option value={additem.client} key={info.id}>
+                        {info.username}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+              <div className="btn-item">
+                <Btn />
+              </div>
+            </form>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+};
 
-          <button>Agregar items a clientes</button>
-        </form>
-      </div>
+const Btn = () => {
+  const [click, setClick] = useState(false);
+  const clickFun = () => {
+    setTimeout(() => {
+      setClick(false);
+      window.location.reload();
+    }, 1500);
+    setClick(true);
+  };
+  return (
+    <>
+      {click ? (
+        <button className="active-btn-add">
+          <img src={load} />
+        </button>
+      ) : (
+        <button onClick={clickFun}>Agregar items a clientes</button>
+      )}
     </>
   );
 };

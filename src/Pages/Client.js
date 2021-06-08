@@ -52,10 +52,12 @@ const Dashboard = ({ location, item1, item2, item3, item4, item5 }) => {
   return (
     <>
       {item1 ? <PanelCCTV /> : null}
-      <div className="cont-icons-cli">
-        {item2 ? <WeatherPanel location={location} /> : null}
-        {item3 ? <GetDevices /> : null}
-      </div>
+      {item2 || item3 ? (
+        <div className="cont-icons-cli">
+          {item2 ? <WeatherPanel location={location} /> : null}
+          {item3 ? <GetDevices /> : null}
+        </div>
+      ) : null}
       <div className="contianer-data">
         {item4 ? <Assistance /> : null}
         {item5 ? (
